@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fd77afb-97d0-4059-9724-48bf12670eae" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/be/devine/cp3/Application.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/xml/XMLParser.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2DEV1_buysseWarre_CP3_EINDOPDRACHT.iml" afterPath="$PROJECT_DIR$/2DEV1_buysseWarre_CP3_EINDOPDRACHT.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.as" afterPath="$PROJECT_DIR$/src/Main.as" />
     </list>
     <ignored path="2DEV1_buysseWarre_CP3_EINDOPDRACHT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,22 +72,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as">
+      <file leaf-file-name="AppModel.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="35" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#189#238#0" expanded="true" />
-              </folding>
+            <state line="19" column="0" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppModel.as" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as">
+      <file leaf-file-name="Application.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="460" selection-end="460" vertical-scroll-proportion="0.4620853">
-              <folding />
+            <state line="26" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="0.41666666">
+              <folding>
+                <element signature="e#189#238#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,6 +124,7 @@
         <option value="$PROJECT_DIR$/src/be/devine/cp3.presentation/model/AppModel.as" />
         <option value="$PROJECT_DIR$/src/Main.as" />
         <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/xml/XMLParser.as" />
       </list>
     </option>
   </component>
@@ -231,6 +229,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -250,6 +270,9 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/be/devine/cp3/presentation/xml" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/be/devine/cp3/presentation" />
     </key>
@@ -523,7 +546,11 @@
       <created>1353439487740</created>
       <updated>1353439487740</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- Preloader added">
+      <created>1353449036565</created>
+      <updated>1353449036565</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -535,7 +562,7 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39892906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39892906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -625,15 +652,6 @@
         <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="35" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#189#238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="76" selection-start="1915" selection-end="1915" vertical-scroll-proportion="0.0">
@@ -645,8 +663,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="460" selection-end="460" vertical-scroll-proportion="0.4620853">
+        <state line="19" column="0" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/xml/XMLParser.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="0.41666666">
+          <folding>
+            <element signature="e#189#238#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
