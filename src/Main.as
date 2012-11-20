@@ -27,6 +27,13 @@ public class Main extends Sprite {
         trace("haloowtjes");
         trace("haloowtjes");
         trace("haloowtjes");
+        trace("haloowtjes");
+        trace("haloowtjes");
+        trace("haloowtjes");
+        trace("haloowtjes");
+        trace("haloowtjes");
+        trace("haloowtjes");
+        trace("haloowtjes");
     }
 }
 }
