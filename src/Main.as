@@ -12,10 +12,11 @@ public class Main extends Sprite {
         addChild(textField);
 
 
-        trace("mlkqjdflmkqsdjfklmqsdf");
 
         stage.align =StageAlign.TOP_LEFT;
         stage.scaleMode = StageScaleMode.NO_SCALE;
+
+        trace("dddddddddd");
 
     }
 }
