@@ -11,29 +11,9 @@ public class Main extends Sprite {
         textField.text = "Hello, World";
         addChild(textField);
 
-
-        trace("nog een traceke");
-
-
         stage.align =StageAlign.TOP_LEFT;
         stage.scaleMode = StageScaleMode.NO_SCALE;
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
-        trace("haloowtjes");
+
     }
 }
 }
