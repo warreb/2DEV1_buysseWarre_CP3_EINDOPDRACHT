@@ -11,6 +11,9 @@ public class Main extends Sprite {
 
 
         trace("nog een traceke");
+
+
+        trace("haloowtjes");
     }
 }
 }
