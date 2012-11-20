@@ -17,6 +17,12 @@ public class Main extends Sprite {
         stage.scaleMode = StageScaleMode.NO_SCALE;
 
         trace("dddddddddd");
+        trace("dddddddddd");
+        trace("dddddddddd");
+        trace("dddddddddd");
+        trace("dddddddddd");
+        trace("dddddddddd");
+
 
     }
 }
