@@ -12,7 +12,7 @@ public class Main extends Sprite {
 
         trace("nog een traceke");
 
-            trace("testerdetest");
+
         trace("haloowtjes");
     }
 }
