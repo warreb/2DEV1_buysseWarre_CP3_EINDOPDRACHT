@@ -4,12 +4,14 @@ import flash.display.DisplayObject;
 import flash.display.MovieClip;
 import flash.display.Sprite;
 import flash.display.StageAlign;
+import flash.display.StageDisplayState;
 import flash.display.StageScaleMode;
 import flash.events.Event;
 import flash.events.ProgressEvent;
 import flash.text.TextField;
 import flash.utils.getDefinitionByName;
 
+[SWF(backgroundColor="#dedede", frameRate="100")]
 public class Main extends MovieClip
 {
     // Properties
@@ -21,7 +23,7 @@ public class Main extends MovieClip
     // Constructor
     public function Main()
     {
-        stage.align =StageAlign.TOP_LEFT;
+        stage.align = StageAlign.TOP_LEFT;
         stage.scaleMode = StageScaleMode.NO_SCALE;
 
         _preloader = new Sprite();
@@ -64,8 +66,9 @@ public class Main extends MovieClip
     private function startApp():void
     {
         this.gotoAndStop("start");
+        this.stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
 
-        var AppClass:Class = getDefinitionByName("be.devine.cp3.Application") as Class;
+        var AppClass:Class = getDefinitionByName("be.devine.cp3.presentation.Application") as Class;
         _app = new AppClass();
         addChild( _app );
     }
