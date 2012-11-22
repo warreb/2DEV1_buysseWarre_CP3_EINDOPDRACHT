@@ -4,6 +4,11 @@
     <configurations>
       <configuration name="2DEV1_buysseWarre_CP3_EINDOPDRACHT" target-platform="Desktop" pure-as="true" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/2DEV1_buysseWarre_CP3_EINDOPDRACHT">
         <dependencies target-player="11.1">
+          <entries>
+            <entry library-id="5627c1e1-d946-4454-9a48-2bd673e96adf">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
           <sdk name="4.6.0" />
         </dependencies>
         <compiler-options>
@@ -23,6 +28,17 @@
     </content>
     <orderEntry type="jdk" jdkName="4.6.0" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library type="flex">
+        <properties id="5627c1e1-d946-4454-9a48-2bd673e96adf" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/src/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/src/libs" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

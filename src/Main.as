@@ -1,6 +1,7 @@
 package {
 
 import flash.display.DisplayObject;
+import flash.display.Loader;
 import flash.display.MovieClip;
 import flash.display.Sprite;
 import flash.display.StageAlign;
@@ -8,10 +9,11 @@ import flash.display.StageDisplayState;
 import flash.display.StageScaleMode;
 import flash.events.Event;
 import flash.events.ProgressEvent;
+import flash.net.URLRequest;
 import flash.text.TextField;
 import flash.utils.getDefinitionByName;
 
-[SWF(backgroundColor="#dedede", frameRate="100")]
+
 public class Main extends MovieClip
 {
     // Properties
@@ -31,6 +33,8 @@ public class Main extends MovieClip
         _preloader.y = (stage.stageHeight - 50) /2;
         addChild(_preloader);
 
+
+
         if( loaderInfo.bytesLoaded != loaderInfo.bytesTotal)
         {
             this.loaderInfo.addEventListener(ProgressEvent.PROGRESS, swfProgressHandler);
@@ -42,8 +46,9 @@ public class Main extends MovieClip
         }
     }
 
-
     // Methods
+
+
     private function swfProgressHandler(e:ProgressEvent):void
     {
         var p:Number = (e.bytesLoaded / e.bytesTotal) * 100;
@@ -66,7 +71,6 @@ public class Main extends MovieClip
     private function startApp():void
     {
         this.gotoAndStop("start");
-        this.stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
 
         var AppClass:Class = getDefinitionByName("be.devine.cp3.presentation.Application") as Class;
         _app = new AppClass();
