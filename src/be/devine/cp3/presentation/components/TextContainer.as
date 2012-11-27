@@ -49,6 +49,7 @@ public class TextContainer extends Sprite
                 break;
 
             case 'thumb':
+                    trace(text);
                 _thumb = new TextField();
                 _thumb.text = text;
                 _textFormat.size = fontSize;

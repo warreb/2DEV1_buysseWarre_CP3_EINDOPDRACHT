@@ -103,16 +103,16 @@ public class Slideshow extends Sprite
             //Checken ofdat er een thumb ter beschikking is.
             if(slideNode.list.length())
             {
-                /*for each(var listItem:String in slideNode.list.tag)
+                for each(var listItem:String in slideNode.list.tag)
                 {
-                    trace(listItem);
+
 
                     thumb = new TextContainer('thumb',12,listItem);
                     thumb.x = presentationSlide.width/5;
                     thumb.y = thumb.height + 8;
                     presentationSlide.addChild(thumb);
                 }
-                */
+
             }
 
             _arraySlides.push(presentationSlide);

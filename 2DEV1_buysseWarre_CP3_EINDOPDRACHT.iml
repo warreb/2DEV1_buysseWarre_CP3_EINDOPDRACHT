@@ -11,10 +11,8 @@
           </entries>
           <sdk name="4.6.0" />
         </dependencies>
-        <compiler-options>
-          <option name="additionalOptions" value="-frame=start,be.devine.cp3.presentation.Application" />
-        </compiler-options>
-        <packaging-air-desktop package-file-name="Main" />
+        <compiler-options />
+        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Main-app.xml" package-file-name="Main" />
         <packaging-android />
         <packaging-ios />
       </configuration>

@@ -1,5 +1,8 @@
 package {
 
+import be.devine.cp3.presentation.Application;
+import be.devine.cp3.presentation.model.AppModel;
+
 import flash.display.DisplayObject;
 import flash.display.Loader;
 import flash.display.MovieClip;
@@ -10,18 +13,21 @@ import flash.display.StageDisplayState;
 import flash.display.StageScaleMode;
 import flash.events.Event;
 import flash.events.ProgressEvent;
+import flash.geom.Rectangle;
 import flash.net.URLRequest;
 import flash.text.TextField;
 import flash.utils.getDefinitionByName;
 
+import starling.core.Starling;
 
+[SWF (frameRate='60')]
 public class Main extends MovieClip
 {
     // Properties
 
+    private var _starling: Starling;
 
-    private var _app:DisplayObject;
-    private var _preloader:Sprite;
+
 
     // Constructor
     public function Main()
@@ -29,10 +35,7 @@ public class Main extends MovieClip
         stage.align = StageAlign.TOP_LEFT;
         stage.scaleMode = StageScaleMode.NO_SCALE;
 
-        _preloader = new Sprite();
-        _preloader.x = (stage.stageWidth - 100) /2;
-        _preloader.y = (stage.stageHeight - 50) /2;
-        addChild(_preloader);
+
 
         stage.nativeWindow.visible = true;
         stage.nativeWindow.width = 1024;
@@ -43,48 +46,38 @@ public class Main extends MovieClip
 
 
 
-        if( loaderInfo.bytesLoaded != loaderInfo.bytesTotal)
-        {
-            this.loaderInfo.addEventListener(ProgressEvent.PROGRESS, swfProgressHandler);
-            this.loaderInfo.addEventListener(Event.COMPLETE, swfCompleteHandler);
-        }
-        else
-        {
-            startApp();
-        }
+        _starling = new Starling(Application, stage);
+        _starling.start();
+
+        stage.addEventListener(Event.RESIZE,resizehandler);
+
+        resizehandler(null);
+
+
     }
 
     // Methods
 
 
-    private function swfProgressHandler(e:ProgressEvent):void
-    {
-        var p:Number = (e.bytesLoaded / e.bytesTotal) * 100;
+    private function resizehandler(event:Event):void {
 
-        trace("bytesloaded: " + e.bytesLoaded);
-        trace("bytestotal: " + e.bytesTotal);
 
-        _preloader.graphics.clear();
-        _preloader.graphics.beginFill( 0xff0000, 1 );
-        _preloader.graphics.drawRect( 0, 0, p,100 );
-        _preloader.graphics.endFill();
+
+
+
+        var viewPortRectangle:Rectangle = new Rectangle();
+        viewPortRectangle.width = stage.nativeWindow.width;
+        viewPortRectangle.height = stage.nativeWindow.height;
+
+        Starling.current.viewPort = viewPortRectangle;
+
+        _starling.stage.stageWidth = stage.nativeWindow.width;
+        _starling.stage.stageHeight = stage.nativeWindow.height;
+
+
+
+
 
     }
-
-    private function swfCompleteHandler(e:Event):void
-    {
-        startApp();
-    }
-
-    private function startApp():void
-    {
-        this.gotoAndStop("start");
-
-
-        var AppClass:Class = getDefinitionByName("be.devine.cp3.presentation.Application") as Class;
-        _app = new AppClass();
-        addChild( _app );
-    }
-
 }
 }
