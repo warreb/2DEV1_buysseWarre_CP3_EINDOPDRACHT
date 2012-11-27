@@ -21,11 +21,9 @@ public class Background extends Sprite
     private var _loader:Loader;
     private var _bitmapData:BitmapData;
     private var _pattern:Sprite;
-    private var _appmodel:AppModel;
 
     public function Background()
     {
-        this._appmodel = _appmodel;
 
         //////// Moet nog veranderd worden doordat added_to_stage niet meer mag. Oplossing
         this.addEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);

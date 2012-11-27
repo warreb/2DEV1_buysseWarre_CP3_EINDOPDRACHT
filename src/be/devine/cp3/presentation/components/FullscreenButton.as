@@ -18,9 +18,9 @@ public class FullscreenButton extends Sprite
 
     private var _appmodel:AppModel;
     private var _fulscreenbutton:BasisFullscreenButton;
-    public function FullscreenButton(appModel:AppModel)
+    public function FullscreenButton()
     {
-        this._appmodel = appModel;
+        this._appmodel = AppModel.getInstance();
 
         this.addEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
     }
@@ -31,9 +31,6 @@ public class FullscreenButton extends Sprite
         _fulscreenbutton = new BasisFullscreenButton();
         _fulscreenbutton.addEventListener(MouseEvent.CLICK, fullscreenHandler);
         addChild(_fulscreenbutton);
-
-
-        //this.stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
 
     }
 

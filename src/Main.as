@@ -3,6 +3,7 @@ package {
 import flash.display.DisplayObject;
 import flash.display.Loader;
 import flash.display.MovieClip;
+import flash.display.Screen;
 import flash.display.Sprite;
 import flash.display.StageAlign;
 import flash.display.StageDisplayState;
@@ -32,6 +33,13 @@ public class Main extends MovieClip
         _preloader.x = (stage.stageWidth - 100) /2;
         _preloader.y = (stage.stageHeight - 50) /2;
         addChild(_preloader);
+
+        stage.nativeWindow.visible = true;
+        stage.nativeWindow.width = 1024;
+        stage.nativeWindow.height = 786;
+        stage.nativeWindow.x = (Screen.mainScreen.bounds.width - stage.nativeWindow.width) / 2;
+        stage.nativeWindow.y = (Screen.mainScreen.bounds.height - stage.nativeWindow.height) / 2;
+        stage.nativeWindow.title ="Thisplay - Presentation";
 
 
 
@@ -71,6 +79,7 @@ public class Main extends MovieClip
     private function startApp():void
     {
         this.gotoAndStop("start");
+
 
         var AppClass:Class = getDefinitionByName("be.devine.cp3.presentation.Application") as Class;
         _app = new AppClass();

@@ -1,0 +1,41 @@
+<slides>
+    <slide id="1">
+        <titel>Slide nummer 1</titel>
+        <image_path>1.jpg</image_path>
+        <list>
+            <tag>bulletpoint 1</tag>
+            <tag>bulletpoint 2</tag>
+            <tag>bulletpoint 3</tag>
+            <tag>bulletpoint 4</tag>
+        </list>
+    </slide>
+    <slide id="2">
+        <titel>Slide nummer 2</titel>
+        <list>
+            <tag>bulletpoint 1</tag>
+            <tag>bulletpoint 2</tag>
+            <tag>bulletpoint 3</tag>
+            <tag>bulletpoint 4</tag>
+        </list>
+    </slide>
+    <slide id="3">
+        <titel>Slide nummer 3</titel>
+        <image_path>2.jpg</image_path>
+        <list>
+            <tag>bulletpoint 1</tag>
+            <tag>bulletpoint 2</tag>
+            <tag>bulletpoint 3</tag>
+            <tag>bulletpoint 4</tag>
+        </list>
+    </slide>
+    <slide id="4">
+        <titel>Slide nummer 4</titel>
+        <image_path>3.jpg</image_path>
+        <list>
+            <tag>bulletpoint 1</tag>
+            <tag>bulletpoint 2</tag>
+            <tag>bulletpoint 3</tag>
+            <tag>bulletpoint 4</tag>
+        </list>
+    </slide>
+</slides>
