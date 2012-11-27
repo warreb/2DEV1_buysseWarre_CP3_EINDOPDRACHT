@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fd77afb-97d0-4059-9724-48bf12670eae" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/xml/slides.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/components/ArrowButton.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/components/Slideshow.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/components/TextContainer.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/components/Thumbgroup.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/queue/Queue.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/queue/Task.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/images/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/images/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/images/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/libs/libs.fla" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/libs/libs.swc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.as" afterPath="$PROJECT_DIR$/src/Main.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/components/Background.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/components/Background.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/components/FullscreenButton.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/components/FullscreenButton.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/xml/XMLParser.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/xml/XMLParser.as" />
     </list>
     <ignored path="2DEV1_buysseWarre_CP3_EINDOPDRACHT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -321,20 +312,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -698,7 +675,11 @@
       <created>1353617806431</created>
       <updated>1353617806431</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="- Slideshow working&#10;- Appmodel -&gt; Singleton added">
+      <created>1354018162893</created>
+      <updated>1354018162893</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -767,7 +748,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Backgroundpattern done (components -&gt; Background.as)&#10;- Toggle Fullscreenbutton done (components -&gt;Fullscreenbutton.as)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Slideshow working&#10;- Appmodel -&gt; Singleton added" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -788,6 +769,7 @@
     <MESSAGE value="- Preloader added" />
     <MESSAGE value="- Setup added&#10;- XMLParser added" />
     <MESSAGE value="- Backgroundpattern done (components -&gt; Background.as)&#10;- Toggle Fullscreenbutton done (components -&gt;Fullscreenbutton.as)" />
+    <MESSAGE value="- Slideshow working&#10;- Appmodel -&gt; Singleton added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
