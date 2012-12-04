@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3.presentation.view {
+import be.devine.cp3.presentation.style;
 import be.devine.cp3.presentation.vo.TextElementVO;
 
 import flash.display.Sprite;
@@ -23,6 +24,9 @@ public class TextContainer extends Container
     private var _helveticaNeueLight:HelveticaNeueLight;
     private var _agencyFB:AgencyFont;
 
+    style.Agency;
+    style.Verdana;
+
 
 
     public function TextContainer(txtelement:TextElementVO)
@@ -31,10 +35,11 @@ public class TextContainer extends Container
 
         trace("in de textcontainer");
 
-        var starlingtext: starling.text.TextField = new starling.text.TextField(300,100,txtelement.text,Color.AQUA.toString());
+        var starlingtext: starling.text.TextField = new starling.text.TextField(587,50,txtelement.text,"Agency",32,0X000000);
 
         starlingtext.hAlign = HAlign.LEFT;
         starlingtext.vAlign = VAlign.TOP;
+        starlingtext.autoScale = true;
         addChild(starlingtext);
 
       /*  _agencyFB = new AgencyFont();

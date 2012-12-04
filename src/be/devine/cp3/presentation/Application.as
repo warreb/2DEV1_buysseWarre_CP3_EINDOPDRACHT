@@ -145,8 +145,8 @@ public class Application extends starling.display.Sprite
         _logo.x = (stage.stageWidth/2) - (_logo.width/2);
         _logo.y = 25;
 
-        //_slideshow.x = (stage.stageWidth/2) - (587/2);
-       //_slideshow.y = (stage.stageHeight/6);
+        _slideshow.x = (stage.stageWidth/2) - (587/2);
+        _slideshow.y = (stage.stageHeight/6);
     }
 
 }
