@@ -5,7 +5,7 @@
  * Time: 20:43
  * To change this template use File | Settings | File Templates.
  */
-package be.devine.cp3.presentation.components {
+package be.devine.cp3.presentation.view {
 import be.devine.cp3.presentation.model.AppModel;
 
 import flash.display.BitmapData;
@@ -17,6 +17,7 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 
 import starling.core.Starling;
+import starling.display.Button;
 import starling.display.Image;
 
 import starling.display.Sprite;
@@ -27,7 +28,7 @@ public class FullscreenButton extends starling.display.Sprite
 {
 
     private var _appmodel:AppModel;
-    private var _fullscreenbutton:Image;
+    private var _fullscreenbutton:Button;
     public function FullscreenButton()
     {
         this._appmodel = AppModel.getInstance();
@@ -44,8 +45,10 @@ public class FullscreenButton extends starling.display.Sprite
         bitmapdata.draw(bfsbtn);
 
 
+
         var texture:Texture = starling.textures.Texture.fromBitmapData(bitmapdata);
-        _fullscreenbutton = new Image(texture);
+        _fullscreenbutton = new Button(Texture.fromBitmapData(bitmapdata),"");
+        _fullscreenbutton.addEventListener(starling.events.Event.TRIGGERED,fullscreenHandler)
         addChild(_fullscreenbutton);
 
         _fullscreenbutton.addEventListener(MouseEvent.CLICK, fullscreenHandler);
@@ -53,10 +56,10 @@ public class FullscreenButton extends starling.display.Sprite
 
     }
 
-    private function fullscreenHandler(event:MouseEvent):void
+    private function fullscreenHandler(event:starling.events.Event):void
     {
         trace("erin geraakt");
-        if(Starling.current.nativeStage.displayState == StageDisplayState.FULL_SCREEN_INTERACTIVE)
+       if(Starling.current.nativeStage.displayState == StageDisplayState.FULL_SCREEN_INTERACTIVE)
         {
             Starling.current.nativeStage.displayState = StageDisplayState.NORMAL;
             _appmodel.isFullscreen = false;

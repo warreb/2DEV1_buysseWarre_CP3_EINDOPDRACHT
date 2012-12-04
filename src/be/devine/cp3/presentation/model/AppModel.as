@@ -31,8 +31,6 @@ public class AppModel extends EventDispatcher
     private var _isFullscreen:Boolean;
     private var _arraySlides:Array;
 
-
-
     private var _activeSlide:uint;
 
     public function AppModel(e:Enforcer)

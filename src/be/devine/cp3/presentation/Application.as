@@ -7,10 +7,11 @@
  */
 package be.devine.cp3.presentation
 {
-import be.devine.cp3.presentation.components.Background;
-import be.devine.cp3.presentation.components.FullscreenButton;
-import be.devine.cp3.presentation.components.Slideshow;
+import be.devine.cp3.presentation.view.Background;
+import be.devine.cp3.presentation.view.FullscreenButton;
+import be.devine.cp3.presentation.view.Slideshow;
 import be.devine.cp3.presentation.model.AppModel;
+import be.devine.cp3.presentation.service.SlideService;
 import be.devine.cp3.presentation.vo.SlideVO;
 import be.devine.cp3.presentation.xml.XMLParser;
 
@@ -54,6 +55,8 @@ public class Application extends starling.display.Sprite
     private var _xmlparser:XMLParser;
     private var _slideVO:SlideVO;
 
+    private var slideservice:SlideService;
+
 
 
 
@@ -63,43 +66,41 @@ public class Application extends starling.display.Sprite
 
         this.addEventListener(starling.events.Event.ADDED_TO_STAGE, addedToStageHandler);
 
-        /*  this._appModel = AppModel.getInstance();
-         _xmlparser = new XMLParser();
-         _xmlparser.addEventListener(XMLParser.XML_LOADED, xmlLoadedHandler);
-         _xmlparser.load("assets/xml/slides.xml");*/
+        this._appModel = AppModel.getInstance();
+
+        slideservice = new SlideService();
+        slideservice.addEventListener(flash.events.Event.COMPLETE,slidesCompleteHandler);
+        slideservice.load();
+
+        _appModel.addEventListener(AppModel.SLIDES_CHANGED,slideChangedHandler);
+
+
 
 
 
     }
 
+    private function slideChangedHandler(e:flash.events.Event):void {
 
+        trace("tester");
+        _slideshow  = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
+        addChild(_slideshow);
 
-  /*  private function xmlLoadedHandler(event:Event):void
-    {
-
-
-
-
-        var arraySlides:Array = new Array();
-
-        var loadedData:XML = (event.currentTarget as XMLParser).ingeladenData;
-
-        for each(var slideNode:XML in loadedData.slide)
-        {
-            arraySlides.push(slideNode);
-        }
-
-        _appModel.arraySlides = arraySlides;
+        _slideshow.x = (stage.stageWidth/2) - (587/2);
+        _slideshow.y = (stage.stageHeight/5);
     }
 
-    private function resizeHandler(e:Event):void
-    {
-        rearrange();
-    }*/
+    private function slidesCompleteHandler(e:flash.events.Event):void {
+       _appModel.arraySlides = slideservice.slides;
+        _appModel.activeSlide = _appModel.arraySlides[0];
+
+    }
+
+
 
     private function addedToStageHandler(e:starling.events.Event):void
     {
-        //stage.addEventListener(Event.RESIZE, resizeHandler);
+        stage.addEventListener(starling.events.Event.RESIZE, rearrange);
         layout();
     }
 
@@ -114,15 +115,12 @@ public class Application extends starling.display.Sprite
 
 
 
-        /*_slideshow = new Slideshow();
-         //addChild(_slideshow);
-         _slideshow.x = (stage.stageWidth/2) - (587/2);
-         _slideshow.y = (stage.stageHeight/5);*/
+
 
          _fullscreenbutton = new FullscreenButton();
          addChild(_fullscreenbutton);
 
-       rearrange();
+       rearrange(null);
 
 
     }
@@ -141,13 +139,14 @@ public class Application extends starling.display.Sprite
 
     }
 
-    private function rearrange():void
+    private function rearrange(e:starling.events.Event):void
     {
+
         _logo.x = (stage.stageWidth/2) - (_logo.width/2);
         _logo.y = 25;
 
-       // _slideshow.x = (stage.stageWidth/2) - (587/2);
-    //    _slideshow.y = (stage.stageHeight/6);
+        //_slideshow.x = (stage.stageWidth/2) - (587/2);
+       //_slideshow.y = (stage.stageHeight/6);
     }
 
 }

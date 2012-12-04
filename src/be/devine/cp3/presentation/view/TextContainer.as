@@ -5,35 +5,45 @@
  * Time: 19:14
  * To change this template use File | Settings | File Templates.
  */
-package be.devine.cp3.presentation.components {
-import flash.display.Sprite;
-import flash.text.AntiAliasType;
-import flash.text.TextField;
-import flash.text.TextFieldAutoSize;
-import flash.text.TextFormat;
-import flash.text.TextFormatAlign;
+package be.devine.cp3.presentation.view {
+import be.devine.cp3.presentation.vo.TextElementVO;
 
-public class TextContainer extends Sprite
+import flash.display.Sprite;
+
+import starling.display.Sprite;
+
+import starling.text.TextField;
+import starling.utils.Color;
+import starling.utils.HAlign;
+import starling.utils.VAlign;
+
+public class TextContainer extends Container
 {
 
     private var _helveticaNeueLight:HelveticaNeueLight;
     private var _agencyFB:AgencyFont;
-    private var _titel:TextField;
-    private var _thumb:TextField;
-    private var _textFormat:TextFormat;
 
 
-    public function TextContainer(type:String, fontSize:int, text:String = '')
+
+    public function TextContainer(txtelement:TextElementVO)
     {
+            super(txtelement)
 
+        trace("in de textcontainer");
 
-        _agencyFB = new AgencyFont();
+        var starlingtext: starling.text.TextField = new starling.text.TextField(300,100,txtelement.text,Color.AQUA.toString());
+
+        starlingtext.hAlign = HAlign.LEFT;
+        starlingtext.vAlign = VAlign.TOP;
+        addChild(starlingtext);
+
+      /*  _agencyFB = new AgencyFont();
 
         _textFormat = new TextFormat();
         _textFormat.font = _agencyFB.fontName;
-        _textFormat.align = TextFormatAlign.LEFT;
+        _textFormat.align = TextFormatAlign.LEFT;*/
 
-        switch(type)
+       /* switch(type)
         {
             case 'titel':
                 _titel = new TextField();
@@ -60,10 +70,10 @@ public class TextContainer extends Sprite
                 _thumb.antiAliasType = AntiAliasType.ADVANCED;
                 _thumb.textColor = 0x000;
             break;
-        }
+        }*/
 
 
-        addChild(_titel);
+
 
 
 

@@ -5,7 +5,7 @@
  * Time: 01:31
  * To change this template use File | Settings | File Templates.
  */
-package be.devine.cp3.presentation.components {
+package be.devine.cp3.presentation.view {
 import be.devine.cp3.presentation.model.AppModel;
 
 public class Thumbgroup

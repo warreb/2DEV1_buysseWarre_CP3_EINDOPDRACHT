@@ -5,7 +5,7 @@
  * Time: 20:36
  * To change this template use File | Settings | File Templates.
  */
-package be.devine.cp3.presentation.components
+package be.devine.cp3.presentation.view
 {
 import be.devine.cp3.presentation.model.AppModel;
 
@@ -73,11 +73,13 @@ public class Background extends starling.display.Sprite
     private function resizeHandler(e:starling.events.Event):void
     {
 
+
             if(_img != null){
 
                 removeChild(_img);
 
             }
+
 
 
 

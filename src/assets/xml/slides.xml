@@ -1,41 +1,39 @@
 <slides>
     <slide id="1">
-        <titel>Slide nummer 1</titel>
-        <image_path>1.jpg</image_path>
-        <list>
-            <tag>bulletpoint 1</tag>
-            <tag>bulletpoint 2</tag>
-            <tag>bulletpoint 3</tag>
-            <tag>bulletpoint 4</tag>
-        </list>
+        <slideElements>
+            <element type="titel">Titel</element>
+            <element type="image">1.jpg</element>
+
+        </slideElements>
+
     </slide>
     <slide id="2">
-        <titel>Slide nummer 2</titel>
-        <list>
-            <tag>bulletpoint 1</tag>
-            <tag>bulletpoint 2</tag>
-            <tag>bulletpoint 3</tag>
-            <tag>bulletpoint 4</tag>
-        </list>
+        <slideElements>
+            <element type="titel">Titel</element>
+            <element type="image">2.jpg</element>
+            <element type="bullet">
+                <bullets>
+                    <bullet>bulletpoint1</bullet>
+                    <bullet>bulletpoint1</bullet>
+                    <bullet>bulletpoint1</bullet>
+                    <bullet>bulletpoint1</bullet>
+                </bullets>
+            </element>
+        </slideElements>
     </slide>
     <slide id="3">
-        <titel>Slide nummer 3</titel>
-        <image_path>2.jpg</image_path>
-        <list>
-            <tag>bulletpoint 1</tag>
-            <tag>bulletpoint 2</tag>
-            <tag>bulletpoint 3</tag>
-            <tag>bulletpoint 4</tag>
-        </list>
+        <slideElements>
+            <element type="titel">Titel 2</element>
+            <element type="image">3.jpg</element>
+            <element type="bullet">
+                <bullets>
+                    <bullet>bulletpoint1</bullet>
+                    <bullet>bulletpoint1</bullet>
+                    <bullet>bulletpoint1</bullet>
+                    <bullet>bulletpoint1</bullet>
+                </bullets>
+            </element>
+        </slideElements>
     </slide>
-    <slide id="4">
-        <titel>Slide nummer 4</titel>
-        <image_path>3.jpg</image_path>
-        <list>
-            <tag>bulletpoint 1</tag>
-            <tag>bulletpoint 2</tag>
-            <tag>bulletpoint 3</tag>
-            <tag>bulletpoint 4</tag>
-        </list>
-    </slide>
+
 </slides>

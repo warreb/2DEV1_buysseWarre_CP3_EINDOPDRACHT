@@ -5,16 +5,30 @@
  * Time: 01:33
  * To change this template use File | Settings | File Templates.
  */
-package be.devine.cp3.presentation.components {
+package be.devine.cp3.presentation.view {
+import be.devine.cp3.presentation.factory.view.ViewFactory;
 import be.devine.cp3.presentation.model.AppModel;
 import be.devine.cp3.presentation.queue.Queue;
 import be.devine.cp3.presentation.queue.Task;
+import be.devine.cp3.presentation.vo.ElementVO;
+import be.devine.cp3.presentation.vo.SlideVO;
+
+import flash.display.Bitmap;
+
+import flash.display.BitmapData;
+
+import flash.display.Sprite;
 
 import flash.display.Sprite;
 
 import flash.events.Event;
 
-public class Slideshow extends Sprite
+import starling.display.Image;
+
+import starling.display.Sprite;
+import starling.textures.Texture;
+
+public class Slideshow extends starling.display.Sprite
 {
 
     private var _appmodel:AppModel;
@@ -24,40 +38,61 @@ public class Slideshow extends Sprite
     private var _prevArrow:BasisArrow;
     private var _nextArrow:BasisArrow;
 
+    private var _slideVO:SlideVO;
+
     private var _isCurrentSlideChanged:Boolean = false;
 
-    public function Slideshow()
+    public function Slideshow(slidevo:SlideVO)
     {
+
+        this._slideVO = slidevo;
+
+
         this._appmodel = AppModel.getInstance();
 
-        _appmodel.addEventListener(AppModel.SLIDES_CHANGED, slideChangedHandler);
-        _appmodel.addEventListener(AppModel.SELECTED_SLIDE_CHANGED, currentSlideChangedHandler);
+        var presentationSlide:flash.display.Sprite = new flash.display.Sprite();
+        presentationSlide.graphics.beginFill(0xFFFFFF);
+        presentationSlide.graphics.drawRect(0,0,587, 587);
+        presentationSlide.graphics.endFill();
+
+        var presentationBmpData: BitmapData = new BitmapData(presentationSlide.width,presentationSlide.height);
+
+        presentationBmpData.draw(presentationSlide);
+
+        var presentationBmp: Bitmap = new Bitmap(presentationBmpData);
+
+        var presentationtexture: Texture = Texture.fromBitmap(presentationBmp);
+        var presentationbg:Image = new Image(presentationtexture);
+        addChild(presentationbg);
+
+        trace(_slideVO);
+
+        for each(var elementvo:ElementVO in _slideVO.list){
+        var element:Container = ViewFactory.createFromElementVO(elementvo);
+            addChild(element);
+         }
+        //_appmodel.addEventListener(AppModel.SLIDES_CHANGED, slideChangedHandler);
+       // _appmodel.addEventListener(AppModel.SELECTED_SLIDE_CHANGED, currentSlideChangedHandler);
 
 
 
     }
 
-    private function slideChangedHandler(event:Event):void
+   private function slideChangedHandler(event:Event):void
     {
 
 
         trace(" de slides zijn gechanged");
 
-        _queue = new Queue();
+        trace(_appmodel.arraySlides[0]);
 
-        for each(var slideNode:XML in _appmodel.arraySlides)
-        {
-            if(slideNode.image_path.length())
-            {
-                _queue.add(new Task('assets/images/' + slideNode.image_path));
-            }
-        }
 
-        _queue.addEventListener(Queue.QUEUE_COMPLETE, queueCompleteHandler);
-        _queue.start();
+
+
+
     }
 
-    private function queueCompleteHandler(event:Event):void
+/*    private function queueCompleteHandler(event:Event):void
     {
 
         _arraySlides = new Array();
@@ -65,10 +100,7 @@ public class Slideshow extends Sprite
         {
 
 
-            var presentationSlide:Sprite = new Sprite();
-            presentationSlide.graphics.beginFill(0xFFFFFF);
-            presentationSlide.graphics.drawRect(0,0,587, 587);
-            presentationSlide.graphics.endFill();
+
 
             addChild(presentationSlide);
 
@@ -121,9 +153,9 @@ public class Slideshow extends Sprite
 
         createButtons(presentationSlide);
 
-    }
+    }*/
 
-    private function createButtons(presentationSlide:Sprite):void
+  /*  private function createButtons(presentationSlide:Sprite):void
     {
         _nextArrow = new ArrowButton('next');
         _nextArrow.x = presentationSlide.width/2 + 330;
@@ -134,7 +166,7 @@ public class Slideshow extends Sprite
         _prevArrow.x = presentationSlide.width/2 - 330;
         _prevArrow.y = presentationSlide.height/2;
         addChild(_prevArrow);
-    }
+    }*/
 
 
     private function currentSlideChangedHandler(e:Event):void

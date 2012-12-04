@@ -64,7 +64,6 @@ public class Main extends MovieClip
 
 
 
-
         var viewPortRectangle:Rectangle = new Rectangle();
         viewPortRectangle.width = stage.nativeWindow.width;
         viewPortRectangle.height = stage.nativeWindow.height;
