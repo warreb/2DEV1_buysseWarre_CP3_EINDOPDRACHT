@@ -2,7 +2,16 @@
     <slide id="1">
         <slideElements>
             <element type="titel">Titel</element>
+            <element type="subtitel">Subtitel</element>
             <element type="image">1.jpg</element>
+            <element type="bullet">
+                <bullets>
+                    <bullet>bulletpoint1</bullet>
+                    <bullet>bulletpoint1</bullet>
+                    <bullet>bulletpoint1</bullet>
+                    <bullet>bulletpoint1</bullet>
+                </bullets>
+            </element>
 
         </slideElements>
 

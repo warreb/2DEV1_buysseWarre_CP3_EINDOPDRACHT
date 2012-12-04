@@ -17,6 +17,7 @@ public class ElementVOFactory {
         switch("" + elementXML.@type)
         {
             case "titel": return createTitelElementVO(elementXML);
+            case 'subtitel': return createSubtitelElementVo(elementXML);
             case "image": return createImageElementVO(elementXML);
             case "bullet": return createBulletElementVO(elementXML);
         }
@@ -24,9 +25,18 @@ public class ElementVOFactory {
 
     }
 
+    private static function createSubtitelElementVo(info:XML){
+        var elementvo:TextElementVO = new TextElementVO();
+        elementvo.text = info;
+        elementvo.size = 20;
+
+        return elementvo;
+    }
+
     public static function createTitelElementVO(info:XML){
         var elementvo:TextElementVO = new TextElementVO();
         elementvo.text = info;
+        elementvo.size = 40;
 
         return elementvo;
     }

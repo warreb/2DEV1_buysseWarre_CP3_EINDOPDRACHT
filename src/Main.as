@@ -3,6 +3,8 @@ package {
 import be.devine.cp3.presentation.Application;
 import be.devine.cp3.presentation.model.AppModel;
 
+import flash.desktop.NativeApplication;
+
 import flash.display.DisplayObject;
 import flash.display.Loader;
 import flash.display.MovieClip;
@@ -40,6 +42,7 @@ public class Main extends MovieClip
         stage.nativeWindow.visible = true;
         stage.nativeWindow.width = 1024;
         stage.nativeWindow.height = 786;
+
         stage.nativeWindow.x = (Screen.mainScreen.bounds.width - stage.nativeWindow.width) / 2;
         stage.nativeWindow.y = (Screen.mainScreen.bounds.height - stage.nativeWindow.height) / 2;
         stage.nativeWindow.title ="Thisplay - Presentation";
@@ -70,6 +73,7 @@ public class Main extends MovieClip
 
         _starling.stage.stageWidth = stage.nativeWindow.width;
         _starling.stage.stageHeight = stage.nativeWindow.height;
+
 
 
 

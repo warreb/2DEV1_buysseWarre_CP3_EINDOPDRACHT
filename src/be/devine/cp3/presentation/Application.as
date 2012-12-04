@@ -7,6 +7,7 @@
  */
 package be.devine.cp3.presentation
 {
+import be.devine.cp3.presentation.service.StarlingService;
 import be.devine.cp3.presentation.view.Background;
 import be.devine.cp3.presentation.view.FullscreenButton;
 import be.devine.cp3.presentation.view.Slideshow;
@@ -55,6 +56,8 @@ public class Application extends starling.display.Sprite
     private var _xmlparser:XMLParser;
     private var _slideVO:SlideVO;
 
+    private var _slideshowcontainer: starling.display.Sprite;
+
     private var slideservice:SlideService;
 
 
@@ -82,18 +85,17 @@ public class Application extends starling.display.Sprite
 
     private function slideChangedHandler(e:flash.events.Event):void {
 
-        trace("tester");
         _slideshow  = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
-        addChild(_slideshow);
+        _slideshowcontainer.addChild(_slideshow);
 
         _slideshow.x = (stage.stageWidth/2) - (587/2);
         _slideshow.y = (stage.stageHeight/5);
+
     }
 
     private function slidesCompleteHandler(e:flash.events.Event):void {
        _appModel.arraySlides = slideservice.slides;
         _appModel.activeSlide = _appModel.arraySlides[0];
-
     }
 
 
@@ -102,6 +104,7 @@ public class Application extends starling.display.Sprite
     {
         stage.addEventListener(starling.events.Event.RESIZE, rearrange);
         layout();
+
     }
 
     private function layout():void
@@ -110,9 +113,11 @@ public class Application extends starling.display.Sprite
          addChild(_background);
 
         var bfsLogo:Logo = new Logo();
-        _logo = MakeStarlingImg(bfsLogo);
+        _logo = StarlingService.MakeStarlingImg(bfsLogo);
         addChild(_logo);
 
+        _slideshowcontainer = new Sprite();
+        addChild(_slideshowcontainer);
 
 
 
@@ -120,30 +125,21 @@ public class Application extends starling.display.Sprite
          _fullscreenbutton = new FullscreenButton();
          addChild(_fullscreenbutton);
 
-       rearrange(null);
+
+        _logo.x = (stage.stageWidth/2) - (_logo.width/2);
+        _logo.y = 25;
 
 
     }
 
-    private function MakeStarlingImg(object:DisplayObject):Image{
 
-        var bitmapdata = new BitmapData(object.width, object.height,true,0x000000);
-
-        bitmapdata.draw(object);
-
-
-        var texture:starling.textures.Texture = starling.textures.Texture.fromBitmapData(bitmapdata);
-        var image:Image = new Image(texture);
-
-        return image;
-
-    }
 
     private function rearrange(e:starling.events.Event):void
     {
 
         _logo.x = (stage.stageWidth/2) - (_logo.width/2);
         _logo.y = 25;
+
 
         _slideshow.x = (stage.stageWidth/2) - (587/2);
         _slideshow.y = (stage.stageHeight/6);

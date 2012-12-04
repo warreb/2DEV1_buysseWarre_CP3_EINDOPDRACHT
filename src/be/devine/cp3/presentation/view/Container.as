@@ -12,7 +12,7 @@ import starling.display.Sprite;
 
 public class Container extends Sprite {
 
-    protected var elementvo : ElementVO
+    protected var elementvo : ElementVO;
     public function Container(element:ElementVO) {
         this.elementvo = element;
     }

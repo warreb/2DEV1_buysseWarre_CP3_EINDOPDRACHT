@@ -65,11 +65,17 @@ public class Slideshow extends starling.display.Sprite
         var presentationbg:Image = new Image(presentationtexture);
         addChild(presentationbg);
 
-        trace(_slideVO);
-
+        var currentheight:Number = 0;
         for each(var elementvo:ElementVO in _slideVO.list){
         var element:Container = ViewFactory.createFromElementVO(elementvo);
+            element.y = currentheight;
             addChild(element);
+            if(element.height == 0){
+                currentheight += 200;
+            }else{
+                currentheight += element.height + 10;
+            }
+
          }
         //_appmodel.addEventListener(AppModel.SLIDES_CHANGED, slideChangedHandler);
        // _appmodel.addEventListener(AppModel.SELECTED_SLIDE_CHANGED, currentSlideChangedHandler);

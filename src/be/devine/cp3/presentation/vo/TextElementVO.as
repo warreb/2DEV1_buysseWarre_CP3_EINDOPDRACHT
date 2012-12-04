@@ -9,6 +9,7 @@ package be.devine.cp3.presentation.vo {
 public class TextElementVO extends ElementVO {
 
     public var text:String;
+    public var size:Number;
     public function TextElementVO() {
     }
 }

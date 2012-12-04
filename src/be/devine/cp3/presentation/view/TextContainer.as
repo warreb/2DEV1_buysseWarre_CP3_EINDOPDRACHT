@@ -35,47 +35,13 @@ public class TextContainer extends Container
 
         trace("in de textcontainer");
 
-        var starlingtext: starling.text.TextField = new starling.text.TextField(587,50,txtelement.text,"Agency",32,0X000000);
+        var starlingtext: starling.text.TextField = new starling.text.TextField(587,50,txtelement.text,"Agency",txtelement.size,0X000000);
 
-        starlingtext.hAlign = HAlign.LEFT;
+        starlingtext.hAlign = HAlign.CENTER;
         starlingtext.vAlign = VAlign.TOP;
         starlingtext.autoScale = true;
         addChild(starlingtext);
 
-      /*  _agencyFB = new AgencyFont();
-
-        _textFormat = new TextFormat();
-        _textFormat.font = _agencyFB.fontName;
-        _textFormat.align = TextFormatAlign.LEFT;*/
-
-       /* switch(type)
-        {
-            case 'titel':
-                _titel = new TextField();
-                _titel.text = text.toUpperCase();
-                _textFormat.size = fontSize;
-                _titel.setTextFormat(_textFormat);
-                _titel.defaultTextFormat = _textFormat;
-                _titel.autoSize = TextFieldAutoSize.LEFT;
-                _titel.embedFonts = true;
-                _titel.antiAliasType = AntiAliasType.ADVANCED;
-                _titel.textColor = 0x000;
-
-                break;
-
-            case 'thumb':
-                    trace(text);
-                _thumb = new TextField();
-                _thumb.text = text;
-                _textFormat.size = fontSize;
-                _thumb.setTextFormat(_textFormat);
-                _thumb.defaultTextFormat = _textFormat;
-                _thumb.autoSize = TextFieldAutoSize.LEFT;
-                _thumb.embedFonts = true;
-                _thumb.antiAliasType = AntiAliasType.ADVANCED;
-                _thumb.textColor = 0x000;
-            break;
-        }*/
 
 
 
