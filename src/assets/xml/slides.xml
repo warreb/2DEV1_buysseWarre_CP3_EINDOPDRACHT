@@ -18,7 +18,7 @@
     </slide>
     <slide id="2">
         <slideElements>
-            <element type="titel">Titel</element>
+            <element type="titel">Titel2</element>
             <element type="image">2.jpg</element>
             <element type="bullet">
                 <bullets>
@@ -32,7 +32,7 @@
     </slide>
     <slide id="3">
         <slideElements>
-            <element type="titel">Titel 2</element>
+            <element type="titel">Titel 3</element>
             <element type="image">3.jpg</element>
             <element type="bullet">
                 <bullets>
@@ -47,26 +47,18 @@
 
     <slide id="4">
         <slideElements>
-        <element type="titel">slidje make</element>
+        <element type="titel">slidje 4 make</element>
         </slideElements>
     </slide>
 
     <slide id="5">
         <slideElements>
-            <element type="titel">slidje make</element>
+            <element type="titel">slidje 5 make</element>
         </slideElements>
     </slide>
 
-    <slide id="6">
-        <slideElements>
-            <element type="titel">slidje make</element>
-        </slideElements>
-    </slide>
 
-    <slide id="7">
-        <slideElements>
-            <element type="titel">slidje make</element>
-        </slideElements>
-    </slide>
+
+
 
 </slides>

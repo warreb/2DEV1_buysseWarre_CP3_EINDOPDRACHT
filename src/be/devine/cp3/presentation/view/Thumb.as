@@ -7,8 +7,12 @@
  */
 package be.devine.cp3.presentation.view {
 import be.devine.cp3.presentation.model.AppModel;
+import be.devine.cp3.presentation.queue.Queue;
+import be.devine.cp3.presentation.queue.Task;
 import be.devine.cp3.presentation.service.StarlingService;
+import be.devine.cp3.presentation.style;
 import be.devine.cp3.presentation.vo.ElementVO;
+import be.devine.cp3.presentation.vo.ImageElementVO;
 import be.devine.cp3.presentation.vo.SlideVO;
 
 import flash.display.Bitmap;
@@ -28,7 +32,10 @@ import starling.display.Image;
 
 import starling.display.Sprite;
 import starling.events.Event;
+import starling.text.TextField;
 import starling.textures.Texture;
+import starling.utils.HAlign;
+import starling.utils.VAlign;
 
 public class Thumb extends starling.display.Sprite
 {
@@ -37,9 +44,15 @@ public class Thumb extends starling.display.Sprite
     private var _slideVO:SlideVO;
     private var _thumbBtn: Button;
 
-  //  private var _currentHeight:Number = 0;
+    style.Agency;
+
+
+    //  private var _currentHeight:Number = 0;
 
     private var _stThumbBorder:Image;
+    private var _queue:Queue;
+
+    private var _starlingText: TextField;
 
 
 
@@ -49,6 +62,9 @@ public class Thumb extends starling.display.Sprite
         this._slideVO = slideVO;
 
         this._appModel = AppModel.getInstance();
+
+        _starlingText = new starling.text.TextField(100,100,(_slideVO.slideNr+1).toString(),"Agency",50,0XFFFFFF);
+
 
 
         if (_appModel.activeSlide == _slideVO.slideNr){
@@ -60,7 +76,22 @@ public class Thumb extends starling.display.Sprite
 
             addChild(_stThumbBorder);
 
+
+
+
+
+        }else{
+            _starlingText.color = 0X000000;
         }
+
+
+
+        _starlingText.hAlign = HAlign.CENTER;
+        _starlingText.vAlign = VAlign.CENTER;
+        _starlingText.autoScale = true;
+        addChild(_starlingText);
+
+
             var thumbSlide:flash.display.Sprite = new flash.display.Sprite();
             thumbSlide.graphics.beginFill(0xDEDEDE);
             thumbSlide.graphics.drawRect(1,1, 100, 100);
@@ -77,19 +108,27 @@ public class Thumb extends starling.display.Sprite
 
             _thumbBtn = new Button(starling.textures.Texture.fromBitmap(thumbBmp));
             _thumbBtn.addEventListener(starling.events.Event.TRIGGERED,clickHandler);
+        _thumbBtn.alphaWhenDisabled = 0;
+        _thumbBtn.alpha = .3;
             addChild(_thumbBtn);
+
+
     }
+
+
 
     private function changedSlideHandler(event:flash.events.Event):void {
         trace("slide changed");
 
         if(_stThumbBorder != null){
             removeChild(_stThumbBorder);
+            _starlingText.color = 0X000000;
         }
 
         if (_appModel.activeSlide == _slideVO.slideNr){
+            _starlingText.color = 0XFFFFFF;
             var thumbBorder:flash.display.Sprite = new flash.display.Sprite();
-            thumbBorder.graphics.beginFill(0X000000);
+            thumbBorder.graphics.beginFill(0X00000);
             thumbBorder.graphics.drawRect(0,0, 101, 101);
             thumbBorder.graphics.endFill();
             _stThumbBorder = StarlingService.MakeStarlingImg(thumbBorder);

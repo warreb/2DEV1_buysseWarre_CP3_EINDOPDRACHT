@@ -124,7 +124,7 @@ public class Application extends starling.display.Sprite
         addChild(_thumbgroup);
         setChildIndex(_thumbgroup,numChildren -1);
 
-        _thumbgroup.x = (stage.stageWidth/2) - (_thumbgroup.width/2);
+        _thumbgroup.x =0;
         _thumbgroup.y = stage.stageHeight - 140;
 
         _slideshow.x = (stage.stageWidth/2) - (587/2);
@@ -179,7 +179,7 @@ public class Application extends starling.display.Sprite
         _slideshow.x = (stage.stageWidth/2) - (587/2);
         _slideshow.y = (stage.stageHeight/6);
 
-        _thumbgroup.x = (stage.stageWidth/2) - (_thumbgroup.width/2);
+        _thumbgroup.x = 0;
         _thumbgroup.y = (stage.stageHeight - 140);
     }
 
