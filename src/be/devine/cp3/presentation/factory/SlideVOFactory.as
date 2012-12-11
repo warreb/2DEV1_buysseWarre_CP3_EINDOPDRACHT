@@ -17,9 +17,6 @@ public class SlideVOFactory {
         for each (var xmlElement:XML in SlideXML.slideElements.element){
             slidevo.list.push(ElementVOFactory.createFromXML(xmlElement));
             slidevo.slideNr = slidenr;
-
-
-
         }
 
         return slidevo;

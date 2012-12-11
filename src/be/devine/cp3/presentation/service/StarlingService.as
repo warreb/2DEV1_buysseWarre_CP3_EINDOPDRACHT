@@ -8,7 +8,6 @@
 package be.devine.cp3.presentation.service {
 import flash.display.BitmapData;
 import flash.display.DisplayObject;
-
 import starling.display.Image;
 import starling.textures.Texture;
 
@@ -19,7 +18,6 @@ public class StarlingService {
         var bitmapdata = new BitmapData(object.width, object.height,true,0x000000);
 
         bitmapdata.draw(object);
-
 
         var texture:starling.textures.Texture = starling.textures.Texture.fromBitmapData(bitmapdata);
         var image:Image = new Image(texture);

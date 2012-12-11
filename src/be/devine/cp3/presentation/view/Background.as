@@ -7,19 +7,12 @@
  */
 package be.devine.cp3.presentation.view
 {
-import be.devine.cp3.presentation.model.AppModel;
-
-import flash.display.Bitmap;
-
 import flash.display.BitmapData;
 import flash.display.Loader;
 import flash.display.Sprite;
-import flash.display.Sprite;
 import flash.events.Event;
 import flash.net.URLRequest;
-
 import starling.display.Image;
-
 import starling.display.Sprite;
 import starling.events.Event;
 import starling.textures.Texture;
@@ -33,20 +26,13 @@ public class Background extends starling.display.Sprite
 
     private var _img:Image;
 
-    private var _bitmap:Bitmap;
-    private var texture: Texture;
-
     public function Background()
     {
-
-        //////// Moet nog veranderd worden doordat added_to_stage niet meer mag. Oplossing
         this.addEventListener(starling.events.Event.ADDED_TO_STAGE,init);
     }
 
-
-
-    private function init(event:starling.events.Event):void {
-
+    private function init(e:starling.events.Event):void
+    {
         _loader = new Loader();
         _loader.load(new URLRequest("assets/debut_light.png"));
         _loader.contentLoaderInfo.addEventListener(flash.events.Event.COMPLETE, loaderComplete);
@@ -56,47 +42,24 @@ public class Background extends starling.display.Sprite
     {
         _bitmapData = new BitmapData(_loader.width, _loader.height);
         _bitmapData.draw(_loader);
-
         _pattern = new flash.display.Sprite();
-
-
         stage.addEventListener(starling.events.Event.RESIZE, resizeHandler);
 
         resizeHandler(null)
-
-
-
     }
-
-
 
     private function resizeHandler(e:starling.events.Event):void
     {
-
-
-            if(_img != null){
-
-                removeChild(_img);
-
-            }
-
-
-
+        if(_img != null)
+            removeChild(_img);
 
         _pattern.graphics.clear();
         _pattern.graphics.beginBitmapFill(_bitmapData);
         _pattern.graphics.drawRect(0, 0, stage.stageWidth, stage.stageHeight);
         _pattern.graphics.endFill();
 
-
-
-
-
-
         var bmpdata:BitmapData = new BitmapData(stage.stageWidth,stage.stageHeight);
         bmpdata.draw(_pattern);
-
-
 
         var textre:Texture = Texture.fromBitmapData(bmpdata,false,false);
         _img = new Image(textre);

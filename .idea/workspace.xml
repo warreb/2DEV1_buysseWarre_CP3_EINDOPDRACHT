@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fd77afb-97d0-4059-9724-48bf12670eae" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/ArrowButton.as" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/xml/slides.xml" afterPath="$PROJECT_DIR$/src/assets/xml/slides.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/ElementVOFactory.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/ElementVOFactory.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/SlideVOFactory.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/SlideVOFactory.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/service/SlideService.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/service/SlideService.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/service/StarlingService.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/service/StarlingService.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Background.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Background.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/BulletContainer.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/BulletContainer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/FullscreenButton.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/FullscreenButton.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/ImageContainer.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/ImageContainer.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Slideshow.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Slideshow.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/TextContainer.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/TextContainer.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumb.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumb.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumbgroup.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumbgroup.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/ElementVO.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/ElementVO.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/ImageElementVO.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/ImageElementVO.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/SlideVO.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/SlideVO.as" />
     </list>
     <ignored path="2DEV1_buysseWarre_CP3_EINDOPDRACHT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,11 +78,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Thumb.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumb.as">
+      <file leaf-file-name="ElementVOFactory.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/ElementVOFactory.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="39" selection-start="3985" selection-end="3985" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SlideVOFactory.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/SlideVOFactory.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FullscreenButton.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/FullscreenButton.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="81" selection-start="1696" selection-end="1765" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#194#243#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,81 +115,27 @@
       <file leaf-file-name="Thumbgroup.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumbgroup.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="42" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Slideshow.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Slideshow.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="0" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#194#253#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slides.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/assets/xml/slides.xml">
+      <file leaf-file-name="ImageContainer.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/ImageContainer.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="12" selection-start="2540" selection-end="2540" vertical-scroll-proportion="0.943074">
+            <state line="13" column="28" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppModel.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as">
+      <file leaf-file-name="Main.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="32" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TextContainer.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/TextContainer.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="31" selection-start="759" selection-end="1011" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewFactory.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/view/ViewFactory.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="35" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Queue.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/queue/Queue.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="0" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/queue/Task.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0">
+            <state line="43" column="40" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.58225507">
               <folding />
             </state>
           </provider>
@@ -173,30 +157,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/service/StarlingService.as" />
-        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/view/ViewFactory.as" />
-        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Container.as" />
-        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/ImageContainer.as" />
-        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/SlideVO.as" />
         <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/SlideVOFactory.as" />
-        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/queue/Queue.as" />
-        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/queue/Task.as" />
-        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/service/SlideService.as" />
-        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumbgroup.as" />
-        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/TextContainer.as" />
         <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumbgroup.as" />
         <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumb.as" />
-        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/TextContainer.as" />
         <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Slideshow.as" />
-        <option value="$PROJECT_DIR$/src/assets/xml/slides.xml" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/ImageContainer.as" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/BulletContainer.as" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Background.as" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/service/StarlingService.as" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/FullscreenButton.as" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/SlideVO.as" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/ImageElementVO.as" />
+        <option value="$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/ElementVO.as" />
+        <option value="$PROJECT_DIR$/src/Main.as" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
     <option name="y" value="22" />
-    <option name="width" value="1436" />
-    <option name="height" value="878" />
+    <option name="width" value="1440" />
+    <option name="height" value="874" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -226,16 +209,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -304,7 +277,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
+              <option name="myItemId" value="vo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,7 +317,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="presentation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -362,11 +339,81 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="presentation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
+              <option name="myItemId" value="queue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -378,6 +425,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="2DEV1_buysseWarre_CP3_EINDOPDRACHT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -753,7 +810,15 @@
       <created>1355243424909</created>
       <updated>1355243424909</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="- spacebar werkt">
+      <created>1355243665013</created>
+      <updated>1355243665013</updated>
+    </task>
+    <task id="LOCAL-00017" summary="- transitions in comment">
+      <created>1355246786487</created>
+      <updated>1355246786487</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -777,7 +842,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="22" width="1436" height="878" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -785,18 +850,18 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23910172" sideWeight="0.91810346" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23962517" sideWeight="0.91810346" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32797858" sideWeight="0.50359195" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18508583" sideWeight="0.2818086" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32760897" sideWeight="0.49137932" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32496697" sideWeight="0.19037357" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32797858" sideWeight="0.49137932" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3253012" sideWeight="0.19037357" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.49711815" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18587896" sideWeight="0.7608983" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18606322" sideWeight="0.76037484" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266399" sideWeight="0.4855908" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -842,7 +907,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="- alle keydowns gedaan" />
+    <option name="LAST_COMMIT_MESSAGE" value="- transitions in comment" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -868,6 +933,8 @@
     <MESSAGE value="- factory added" />
     <MESSAGE value="- Textcontainer zo goed als af" />
     <MESSAGE value="- alle keydowns gedaan" />
+    <MESSAGE value="- spacebar werkt" />
+    <MESSAGE value="- transitions in comment" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -911,12 +978,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Applications/Adobe Flash Builder 4.6/sdks/4.6.0/frameworks/projects/framework/src/mx/effects/Tween.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="45" selection-start="4571" selection-end="4571" vertical-scroll-proportion="1.7485714" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Background.as">
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/queue/Queue.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
@@ -925,90 +987,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/ElementVO.as">
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/service/SlideService.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="212" selection-end="212" vertical-scroll-proportion="0.05703422" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/service/StarlingService.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="45" selection-start="454" selection-end="713" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/ImageContainer.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="9" selection-start="1052" selection-end="1336" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/ImageElementVO.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumbgroup.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="42" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="29" column="46" selection-start="903" selection-end="904" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/TextContainer.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="31" selection-start="759" selection-end="1011" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/view/ViewFactory.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="35" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/queue/Queue.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/queue/Task.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="32" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumb.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="39" selection-start="3985" selection-end="3985" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Slideshow.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="0" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.0">
+        <state line="163" column="16" selection-start="5035" selection-end="5035" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#194#253#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/xml/slides.xml">
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/view/ViewFactory.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="12" selection-start="2540" selection-end="2540" vertical-scroll-proportion="0.943074">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/ElementVOFactory.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/SlideVOFactory.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/FullscreenButton.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="81" selection-start="1696" selection-end="1765" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#194#243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumbgroup.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/SlideVO.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="1" selection-start="214" selection-end="214" vertical-scroll-proportion="0.2495379">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/TextElementVO.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/ImageElementVO.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="39" selection-start="198" selection-end="198" vertical-scroll-proportion="0.19408503">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/ElementVO.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="24" selection-start="223" selection-end="223" vertical-scroll-proportion="0.22181146">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/vo/BulletElementVO.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/view/ImageContainer.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="40" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.58225507">
           <folding />
         </state>
       </provider>

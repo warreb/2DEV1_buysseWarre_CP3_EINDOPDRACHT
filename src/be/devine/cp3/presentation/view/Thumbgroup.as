@@ -6,23 +6,14 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3.presentation.view {
-import be.devine.cp3.presentation.factory.SlideVOFactory;
 import be.devine.cp3.presentation.model.AppModel;
-import be.devine.cp3.presentation.service.StarlingService;
-import be.devine.cp3.presentation.vo.ElementVO;
 import be.devine.cp3.presentation.vo.SlideVO;
-
 import flash.events.Event;
-
 import starling.animation.Transitions;
-
 import starling.animation.Tween;
-
 import starling.core.Starling;
-
 import starling.display.Sprite;
 import starling.events.Event;
-import starling.events.TouchEvent;
 
 public class Thumbgroup extends Sprite
 {
@@ -33,19 +24,30 @@ public class Thumbgroup extends Sprite
 
     public function Thumbgroup()
     {
-
         _thumbArr = new Array();
 
         this._appmodel = AppModel.getInstance();
 
-
-
         this.addEventListener(starling.events.Event.ADDED_TO_STAGE,addedToStageHandler);
         _appmodel.addEventListener(AppModel.SELECTED_SLIDE_CHANGED,slideChangedHandler);
         _appmodel.addEventListener(AppModel.STAGESIZE_CHANGED,slideChangedHandler);
+        _appmodel.addEventListener(AppModel.THUMB_POSITION_CHANGED, thumbPositionChangedHandler);
+    }
 
-
-
+    private function thumbPositionChangedHandler(event:flash.events.Event):void
+    {
+        if(this.y == stage.stageHeight)
+        {
+            var tween:Tween = new Tween(this,.5, Transitions.EASE_IN_OUT);
+            tween.animate("y", stage.stageHeight - 140);
+            Starling.juggler.add(tween);
+        }
+        else
+        {
+            var tween:Tween = new Tween(this,.5, Transitions.EASE_IN_OUT);
+            tween.animate("y", stage.stageHeight);
+            Starling.juggler.add(tween);
+        }
     }
 
     private function slideChangedHandler(event:flash.events.Event):void {
@@ -53,16 +55,11 @@ public class Thumbgroup extends Sprite
         var xPos:Number = stage.stageWidth/2 ;
         var xPosTotalKleiner: Number =  0;
 
-        trace ("xPos is nu " + xPos);
-
         for each(var _thumb in _thumbArr){
             if(_thumb.slideVO.slideNr < _appmodel.activeSlide){
-                trace("kleinerdan");
                 xPosTotalKleiner += (_thumb.width + 6 );
             }
         }
-
-        trace(xPosTotalKleiner);
 
 
         for each(var _thumb in _thumbArr){
@@ -90,17 +87,13 @@ public class Thumbgroup extends Sprite
             }
 
             setChildIndex(_thumb,_thumb.slideVO.slideNr);
-
-            trace(_thumb.x);
         }
-
     }
 
     private function addedToStageHandler(event:starling.events.Event):void {
 
         var yPos:Number = 0;
         var xPos:Number = stage.stageWidth/2 ;
-        trace ("xPos is " + xPos);
 
         for each(var slideVO:SlideVO in _appmodel.arraySlides)
         {
@@ -118,20 +111,11 @@ public class Thumbgroup extends Sprite
                 _thumb.x = (xPos - _thumb.width/2) - (Math.abs(slideVO.slideNr) * (_thumb.width + 6 )) ;
             }
 
-            trace(xPos);
-
-
-
             _thumbArr.push(_thumb);
-
 
             _thumb.y = yPos;
             addChild(_thumb);
-
         }
-
     }
-
-
 }
 }

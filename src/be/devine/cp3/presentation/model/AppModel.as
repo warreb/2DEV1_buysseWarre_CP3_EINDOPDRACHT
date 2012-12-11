@@ -40,9 +40,7 @@ public class AppModel extends EventDispatcher
     public function AppModel(e:Enforcer)
     {
         if(e == null)
-        {
             throw new Error("Appmodel is a singleton");
-        }
     }
 
 
@@ -77,6 +75,7 @@ public class AppModel extends EventDispatcher
     }
 
 
+    //GotoPrevious/GoToNextSlide functies
     public function goToPreviousSlide():void
     {
         if(activeSlide > 0)
@@ -94,19 +93,14 @@ public class AppModel extends EventDispatcher
     }
 
 
+    //Toggelen van thumbs met spatiebalk
     public function toggleThumbs():void
     {
         if(isThumbActive)
-        {
             isThumbActive = false;
-        }
         else
-        {
             isThumbActive = true;
-        }
     }
-
-
 
 
     //activeSlide getter & setter
@@ -124,6 +118,8 @@ public class AppModel extends EventDispatcher
         }
     }
 
+
+    //isThumbActive getter & setter
     public function get isThumbActive():Boolean
     {
         return _isThumbActive;
@@ -138,6 +134,8 @@ public class AppModel extends EventDispatcher
         }
     }
 
+
+    //slidetween getter&setter
     public function get slideTween():String {
         return _slideTween;
     }

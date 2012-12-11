@@ -6,8 +6,6 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3.presentation.vo {
-
-
 public class ImageElementVO extends  ElementVO{
 
     public var url:String;

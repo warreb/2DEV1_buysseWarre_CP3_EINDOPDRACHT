@@ -27,25 +27,15 @@ public class TextContainer extends Container
     style.Agency;
     style.Verdana;
 
-
-
     public function TextContainer(txtelement:TextElementVO)
     {
-            super(txtelement)
+        super(txtelement);
 
         var starlingtext: starling.text.TextField = new starling.text.TextField(587,50,txtelement.text,"Agency",txtelement.size,0X000000);
-
         starlingtext.hAlign = HAlign.CENTER;
         starlingtext.vAlign = VAlign.TOP;
         starlingtext.autoScale = true;
         addChild(starlingtext);
-
-
-
-
-
-
-
     }
 }
 }

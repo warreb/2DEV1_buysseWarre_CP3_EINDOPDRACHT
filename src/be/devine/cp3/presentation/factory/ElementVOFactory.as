@@ -22,7 +22,6 @@ public class ElementVOFactory {
             case "bullet": return createBulletElementVO(elementXML);
         }
         return null;
-
     }
 
     private static function createSubtitelElementVo(info:XML){

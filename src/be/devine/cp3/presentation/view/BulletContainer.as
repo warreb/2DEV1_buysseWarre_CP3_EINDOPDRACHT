@@ -19,8 +19,6 @@ public class BulletContainer extends Container {
     public function BulletContainer(bulletelement:BulletElementVO) {
         super(bulletelement);
 
-        trace("bulletcontainer",bulletelement.Bullets);
-
         var yPos:Number = 0;
         var xPos:Number = 60;
 
@@ -39,13 +37,11 @@ public class BulletContainer extends Container {
 
             yPos += 20;
 
-            if(nrOfBullets % 3 == 0){
+            if(nrOfBullets % 4 == 0){
                 yPos = 0;
                 xPos +=100;
             }
-
             nrOfBullets +=1;
-
         }
     }
 }

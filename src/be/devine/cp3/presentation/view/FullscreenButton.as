@@ -7,19 +7,11 @@
  */
 package be.devine.cp3.presentation.view {
 import be.devine.cp3.presentation.model.AppModel;
-
 import flash.display.BitmapData;
-
-import flash.display.Sprite;
 import flash.display.StageDisplayState;
-import flash.events.Event;
-import flash.events.Event;
 import flash.events.MouseEvent;
-
 import starling.core.Starling;
 import starling.display.Button;
-import starling.display.Image;
-
 import starling.display.Sprite;
 import starling.events.Event;
 import starling.textures.Texture;
@@ -32,7 +24,6 @@ public class FullscreenButton extends starling.display.Sprite
     public function FullscreenButton()
     {
         this._appmodel = AppModel.getInstance();
-
         this.addEventListener(starling.events.Event.ADDED_TO_STAGE, addedToStageHandler);
     }
 
@@ -44,21 +35,17 @@ public class FullscreenButton extends starling.display.Sprite
 
         bitmapdata.draw(bfsbtn);
 
-
-
         var texture:Texture = starling.textures.Texture.fromBitmapData(bitmapdata);
         _fullscreenbutton = new Button(Texture.fromBitmapData(bitmapdata),"");
-        _fullscreenbutton.addEventListener(starling.events.Event.TRIGGERED,fullscreenHandler)
+        _fullscreenbutton.addEventListener(starling.events.Event.TRIGGERED,fullscreenHandler);
         addChild(_fullscreenbutton);
 
         _fullscreenbutton.addEventListener(MouseEvent.CLICK, fullscreenHandler);
-
 
     }
 
     private function fullscreenHandler(event:starling.events.Event):void
     {
-        trace("erin geraakt");
        if(Starling.current.nativeStage.displayState == StageDisplayState.FULL_SCREEN_INTERACTIVE)
         {
             Starling.current.nativeStage.displayState = StageDisplayState.NORMAL;

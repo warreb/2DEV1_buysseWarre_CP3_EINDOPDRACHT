@@ -27,7 +27,6 @@ public class SlideService extends EventDispatcher{
     }
 
     private function SlideXMLLoadedHandler(event:Event):void {
-        trace("in de slideservice");
             var slidesXML: XML = new XML(event.target.data);
             var slides:Array = new Array();
 

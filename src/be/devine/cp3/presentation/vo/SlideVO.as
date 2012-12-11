@@ -8,15 +8,12 @@
 package be.devine.cp3.presentation.vo {
 public class SlideVO
 {
-
     public var list:Vector.<ElementVO>;
     public var slideNr:uint;
 
     public function SlideVO( )
     {
-
         list = new Vector.<ElementVO>();
-
     }
 
 }
