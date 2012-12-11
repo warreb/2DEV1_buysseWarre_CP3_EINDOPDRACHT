@@ -9,7 +9,6 @@ package be.devine.cp3.presentation.view {
 import be.devine.cp3.presentation.factory.view.ViewFactory;
 import be.devine.cp3.presentation.model.AppModel;
 import be.devine.cp3.presentation.queue.Queue;
-import be.devine.cp3.presentation.queue.Task;
 import be.devine.cp3.presentation.vo.ElementVO;
 import be.devine.cp3.presentation.vo.SlideVO;
 
@@ -17,7 +16,6 @@ import flash.display.Bitmap;
 
 import flash.display.BitmapData;
 
-import flash.display.Sprite;
 
 import flash.display.Sprite;
 
@@ -79,11 +77,6 @@ public class Slideshow extends starling.display.Sprite
 
          }
 
-        //_appmodel.addEventListener(AppModel.SLIDES_CHANGED, slideChangedHandler);
-       // _appmodel.addEventListener(AppModel.SELECTED_SLIDE_CHANGED, currentSlideChangedHandler);
-
-
-
     }
 
    private function slideChangedHandler(event:Event):void
@@ -100,88 +93,6 @@ public class Slideshow extends starling.display.Sprite
 
     }
 
-/*    private function queueCompleteHandler(event:Event):void
-    {
-
-        _arraySlides = new Array();
-        for each(var slideNode:XML in _appmodel.arraySlides)
-        {
-
-
-
-
-            addChild(presentationSlide);
-
-
-            var titel:TextContainer;
-
-            //Instantie van titels aanmaken
-            //Checken ofdat er een titel ter beschikking is.
-            if(slideNode.titel.length())
-            {
-                titel = new TextContainer('titel',30, slideNode.titel);
-                titel.x = presentationSlide.width/2 - titel.width/2;
-                titel.y = 8;
-                presentationSlide.addChild(titel);
-            }
-
-
-            //Instantie van foto's aanmaken
-            for each(var task:Task in _queue.tasks)
-            {
-                var foto = 'assets/images/' + slideNode.image_path;
-                if(task.url == foto)
-                {
-                    task.x = presentationSlide.width/2 - task.image.width/2;
-                    task.y = titel.y + titel.height + 15;
-                    presentationSlide.addChild(task);
-                }
-            }
-
-            var thumb:TextContainer;
-            //Instantie van thumbs aanmaken
-            //Checken ofdat er een thumb ter beschikking is.
-            if(slideNode.list.length())
-            {
-                for each(var listItem:String in slideNode.list.tag)
-                {
-
-
-                    thumb = new TextContainer('thumb',12,listItem);
-                    thumb.x = presentationSlide.width/5;
-                    thumb.y = thumb.height + 8;
-                    presentationSlide.addChild(thumb);
-                }
-
-            }
-
-            _arraySlides.push(presentationSlide);
-
-        }
-
-        createButtons(presentationSlide);
-
-    }*/
-
-  /*  private function createButtons(presentationSlide:Sprite):void
-    {
-        _nextArrow = new ArrowButton('next');
-        _nextArrow.x = presentationSlide.width/2 + 330;
-        _nextArrow.y = presentationSlide.height/2;
-        addChild(_nextArrow);
-
-        _prevArrow = new ArrowButton('prev');
-        _prevArrow.x = presentationSlide.width/2 - 330;
-        _prevArrow.y = presentationSlide.height/2;
-        addChild(_prevArrow);
-    }*/
-
-
-    private function currentSlideChangedHandler(e:Event):void
-    {
-        _isCurrentSlideChanged = true;
-        show();
-    }
 
     private function show():void
     {

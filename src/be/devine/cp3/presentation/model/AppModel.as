@@ -33,6 +33,7 @@ public class AppModel extends EventDispatcher
     private var _isFullscreen:Boolean;
     private var _isThumbActive:Boolean;
     private var _arraySlides:Array;
+    private var _slideTween: String;
 
     private var _activeSlide:uint;
 
@@ -134,6 +135,17 @@ public class AppModel extends EventDispatcher
         {
             _isThumbActive = value;
             dispatchEvent(new Event(AppModel.THUMB_POSITION_CHANGED));
+        }
+    }
+
+    public function get slideTween():String {
+        return _slideTween;
+    }
+
+    public function set slideTween(value:String):void {
+
+        if(_slideTween != value){
+            _slideTween = value;
         }
     }
 }

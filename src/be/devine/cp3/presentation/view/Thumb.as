@@ -141,6 +141,7 @@ public class Thumb extends starling.display.Sprite
 
 
     private function clickHandler(event:starling.events.Event):void {
+        _appModel.slideTween = "click";
         _appModel.activeSlide = _slideVO.slideNr;
     }
 

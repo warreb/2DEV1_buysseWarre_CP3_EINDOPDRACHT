@@ -10,30 +10,15 @@ package be.devine.cp3.presentation
 import be.devine.cp3.presentation.service.StarlingService;
 import be.devine.cp3.presentation.view.Background;
 import be.devine.cp3.presentation.view.FullscreenButton;
-import be.devine.cp3.presentation.view.Thumb;
 import be.devine.cp3.presentation.view.Slideshow;
 import be.devine.cp3.presentation.model.AppModel;
 import be.devine.cp3.presentation.service.SlideService;
 import be.devine.cp3.presentation.view.Thumbgroup;
-import be.devine.cp3.presentation.vo.SlideVO;
-import be.devine.cp3.presentation.xml.XMLParser;
 
-import flash.display.Bitmap;
 
-import flash.display.BitmapData;
-import flash.display.DisplayObject;
-
-import flash.display.Loader;
-import flash.display.MovieClip;
-
-import flash.display.Sprite;
-import flash.display.Stage;
 import flash.display.StageDisplayState;
-import flash.display3D.textures.Texture;
 import flash.events.Event;
-import flash.net.URLRequest;
 
-import org.osmf.logging.Log;
 
 import starling.animation.Transitions;
 
@@ -44,7 +29,6 @@ import starling.display.Image;
 import starling.display.Sprite;
 import starling.events.Event;
 import starling.events.KeyboardEvent;
-import starling.textures.Texture;
 
 
 public class Application extends starling.display.Sprite
@@ -110,44 +94,33 @@ public class Application extends starling.display.Sprite
     private function currentSlideChangedHandler(event:flash.events.Event):void {
 
 
+        switch(_appModel.slideTween){
+            case 'left':
+                var tween:Tween = new Tween(_slideshow,.5,Transitions.EASE_OUT);
+                tween.animate("x",stage.stageWidth);
+                tween.onComplete = slideChangeTransition1Complete;
+                Starling.juggler.add(tween);
+                break;
+            case 'right':
+                var tween:Tween = new Tween(_slideshow,.5);
+                tween.animate("x",-_slideshow.width-10);
+                tween.onComplete = slideChangeTransition1Complete;
+                Starling.juggler.add(tween);
+                break;
+            case 'click':
+            default :
+                var tween:Tween = new Tween(_slideshow,.5);
+                tween.animate("alpha",0);
+                tween.onComplete = slideChangeTransition1Complete;
+                Starling.juggler.add(tween);
+                break;
 
-      /*  var tween:Tween = new Tween(_slideshow,.5,Transitions.EASE_OUT);
-        tween.animate("x",stage.stageWidth);
-        tween.onComplete = slideChangeTransition2Complete;
-        Starling.juggler.add(tween);
-*/
-
-       /* var tween:Tween = new Tween(_slideshow,.5);
-        tween.animate("x",-_slideshow.width-10);
-        tween.onComplete = slideChangeTransition2Complete;
-        Starling.juggler.add(tween);*/
+        }
 
 
-        /*var tween:Tween = new Tween(_slideshow,.5);
-        tween.animate("alpha",0);
-        tween.onComplete = slideChangeTransition1Complete;
-        Starling.juggler.add(tween);*/
     }
 
-    private function slideChangeTransition2Complete():void
-    {
 
-        trace("ik kom erin");
-
-        removeChild(_slideshow);
-
-        _slideshow = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
-        addChild(_slideshow);
-        _slideshow.alpha = 0;
-
-        var tween:Tween = new Tween(_slideshow,.5);
-        tween.animate("alpha",1);
-        Starling.juggler.add(tween);
-
-        _slideshow.x = (stage.stageWidth/2) - (587/2);
-        _slideshow.y = (stage.stageHeight/5);
-        setChildIndex(_slideshow,1);
-    }
 
     private function slideChangeTransition1Complete():void{
 
@@ -208,14 +181,17 @@ public class Application extends starling.display.Sprite
         switch(keycode)
         {
             case 32:
+
                 _appModel.toggleThumbs();
             break;
 
             case 37:
+                _appModel.slideTween = "left";
                 _appModel.goToPreviousSlide();
                 break;
 
             case 39:
+                    _appModel.slideTween = "right";
                 _appModel.goToNextSlide();
                 break;
 

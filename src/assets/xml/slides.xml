@@ -45,6 +45,36 @@
         </slideElements>
     </slide>
 
+    <slide id="3">
+        <slideElements>
+            <element type="titel">Titel 3</element>
+            <element type="image">3.jpg</element>
+            <element type="bullet">
+                <bullets>
+                    <bullet>bulletpoint3</bullet>
+                    <bullet>bulletpoint3</bullet>
+                    <bullet>bulletpoint3</bullet>
+                    <bullet>bulletpoint3</bullet>
+                </bullets>
+            </element>
+        </slideElements>
+    </slide>
+
+    <slide id="3">
+        <slideElements>
+            <element type="titel">Titel 3</element>
+            <element type="image">3.jpg</element>
+            <element type="bullet">
+                <bullets>
+                    <bullet>bulletpoint3</bullet>
+                    <bullet>bulletpoint3</bullet>
+                    <bullet>bulletpoint3</bullet>
+                    <bullet>bulletpoint3</bullet>
+                </bullets>
+            </element>
+        </slideElements>
+    </slide>
+
     <slide id="4">
         <slideElements>
         <element type="titel">slidje 4 make</element>
