@@ -45,6 +45,7 @@ public class Slideshow extends starling.display.Sprite
     public function Slideshow(slidevo:SlideVO)
     {
 
+
         this._slideVO = slidevo;
 
 
@@ -77,6 +78,7 @@ public class Slideshow extends starling.display.Sprite
             }
 
          }
+
         //_appmodel.addEventListener(AppModel.SLIDES_CHANGED, slideChangedHandler);
        // _appmodel.addEventListener(AppModel.SELECTED_SLIDE_CHANGED, currentSlideChangedHandler);
 

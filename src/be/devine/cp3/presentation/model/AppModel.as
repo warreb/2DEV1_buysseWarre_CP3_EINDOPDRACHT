@@ -26,9 +26,12 @@ public class AppModel extends EventDispatcher
 
     public static const SELECTED_SLIDE_CHANGED:String = "selectedSlideChanged";
     public static const SLIDES_CHANGED:String = "slideChanged";
+    public static const STAGESIZE_CHANGED:String = "stageSizeChanged";
+    public static const THUMB_POSITION_CHANGED:String = "thumbPositionChanged";
 
 
     private var _isFullscreen:Boolean;
+    private var _isThumbActive:Boolean;
     private var _arraySlides:Array;
 
     private var _activeSlide:uint;
@@ -53,6 +56,7 @@ public class AppModel extends EventDispatcher
         if(_isFullscreen != value)
         {
             _isFullscreen = value;
+            dispatchEvent(new Event(AppModel.STAGESIZE_CHANGED));
         }
     }
 
@@ -74,27 +78,21 @@ public class AppModel extends EventDispatcher
 
     public function goToPreviousSlide():void
     {
-        if(_activeSlide - 1 > 0)
-        {
+        if(activeSlide > 0)
             activeSlide --;
-        }
         else
-        {
-            activeSlide = _arraySlides.length;
-        }
+            activeSlide = arraySlides.length -1;
     }
 
     public function goToNextSlide():void
     {
-        if(_activeSlide + 1 <= _arraySlides.length)
-        {
+        if(activeSlide < arraySlides.length -1)
             activeSlide ++;
-        }
         else
-        {
-            activeSlide = 1;
-        }
+            activeSlide = 0;
     }
+
+
 
 
     //activeSlide getter & setter
@@ -109,6 +107,20 @@ public class AppModel extends EventDispatcher
         {
             _activeSlide = value;
             dispatchEvent(new Event(AppModel.SELECTED_SLIDE_CHANGED));
+        }
+    }
+
+    public function get isThumbActive():Boolean
+    {
+        return _isThumbActive;
+    }
+
+    public function set isThumbActive(value:Boolean):void
+    {
+        if(_isThumbActive != value)
+        {
+            _isThumbActive = value;
+            dispatchEvent(new Event(AppModel.THUMB_POSITION_CHANGED));
         }
     }
 }

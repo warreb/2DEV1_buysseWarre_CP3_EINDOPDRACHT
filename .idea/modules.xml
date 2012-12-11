@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/2DEV1_buysseWarre_CP3_EINDOPDRACHT.iml" filepath="$PROJECT_DIR$/2DEV1_buysseWarre_CP3_EINDOPDRACHT.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Mathias/src/Mathias.iml" filepath="$PROJECT_DIR$/../Mathias/src/Mathias.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/demos-7/T08-01-AudioPlayerSoundManager/T08-01-AudioPlayerSoundManager.iml" filepath="$USER_HOME$/Downloads/demos-7/T08-01-AudioPlayerSoundManager/T08-01-AudioPlayerSoundManager.iml" />
     </modules>
   </component>
 </project>

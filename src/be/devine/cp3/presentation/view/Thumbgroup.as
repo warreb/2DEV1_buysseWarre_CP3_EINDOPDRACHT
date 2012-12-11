@@ -33,8 +33,6 @@ public class Thumbgroup extends Sprite
 
         for each(var slideVO:SlideVO in _appmodel.arraySlides)
         {
-
-
             _thumb = new Thumb(slideVO);
             _thumb.x = xPos;
             _thumb.y = yPos;
