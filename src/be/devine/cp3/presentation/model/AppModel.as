@@ -93,6 +93,19 @@ public class AppModel extends EventDispatcher
     }
 
 
+    public function toggleThumbs():void
+    {
+        if(isThumbActive)
+        {
+            isThumbActive = false;
+        }
+        else
+        {
+            isThumbActive = true;
+        }
+    }
+
+
 
 
     //activeSlide getter & setter

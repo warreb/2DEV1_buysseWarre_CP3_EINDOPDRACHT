@@ -34,12 +34,15 @@ import flash.net.URLRequest;
 
 import org.osmf.logging.Log;
 
+import starling.animation.Transitions;
+
 import starling.animation.Tween;
 
 import starling.core.Starling;
 import starling.display.Image;
 import starling.display.Sprite;
 import starling.events.Event;
+import starling.events.KeyboardEvent;
 import starling.textures.Texture;
 
 
@@ -76,6 +79,7 @@ public class Application extends starling.display.Sprite
 
         _appModel.addEventListener(AppModel.SLIDES_CHANGED,slideChangedHandler);
         _appModel.addEventListener(AppModel.SELECTED_SLIDE_CHANGED,currentSlideChangedHandler);
+        _appModel.addEventListener(AppModel.THUMB_POSITION_CHANGED, thumbPositionChangedHandler);
 
 
     }
@@ -86,9 +90,24 @@ public class Application extends starling.display.Sprite
         tween.animate("alpha",0);
         tween.onComplete = slideChangeTransition1Complete;
         Starling.juggler.add(tween);
+    }
 
-
-
+    private function thumbPositionChangedHandler(event:flash.events.Event):void
+    {
+        if(_thumbgroup.y == stage.stageHeight)
+        {
+            var tween:Tween = new Tween(_thumbgroup,.5, Transitions.EASE_IN_OUT);
+            tween.animate("y", stage.stageHeight - 140);
+            tween.onComplete = slideChangeTransition1Complete;
+            Starling.juggler.add(tween);
+        }
+        else
+        {
+            var tween:Tween = new Tween(_thumbgroup,.5, Transitions.EASE_IN_OUT);
+            tween.animate("y", stage.stageHeight);
+            tween.onComplete = slideChangeTransition1Complete;
+            Starling.juggler.add(tween);
+        }
     }
 
     private function slideChangeTransition1Complete():void{
@@ -111,20 +130,16 @@ public class Application extends starling.display.Sprite
     private function slideChangedHandler(e:flash.events.Event):void
     {
 
-
         //Slideshow aanmaken
         _slideshow = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
         addChild(_slideshow);
-
-
-
 
         //Slidethumbs aanmaken
         _thumbgroup = new Thumbgroup();
         addChild(_thumbgroup);
         setChildIndex(_thumbgroup,numChildren -1);
 
-        _thumbgroup.x = (stage.stageWidth/2) - (_thumbgroup.width/2);
+        _thumbgroup.x = 0;
         _thumbgroup.y = stage.stageHeight - 140;
 
         _slideshow.x = (stage.stageWidth/2) - (587/2);
@@ -142,8 +157,30 @@ public class Application extends starling.display.Sprite
     private function addedToStageHandler(e:starling.events.Event):void
     {
         stage.addEventListener(starling.events.Event.RESIZE, rearrange);
+        stage.addEventListener(starling.events.KeyboardEvent.KEY_DOWN, keydownhandler);
         layout();
 
+    }
+
+    private function keydownhandler(event:KeyboardEvent):void
+    {
+         var keycode = event.keyCode;
+
+        switch(keycode)
+        {
+            case 32:
+                _appModel.toggleThumbs();
+            break;
+
+            case 37:
+                _appModel.goToPreviousSlide();
+                break;
+
+            case 39:
+                _appModel.goToNextSlide();
+                break;
+
+        }
     }
 
     private function layout():void
@@ -179,7 +216,7 @@ public class Application extends starling.display.Sprite
         _slideshow.x = (stage.stageWidth/2) - (587/2);
         _slideshow.y = (stage.stageHeight/6);
 
-        _thumbgroup.x = (stage.stageWidth/2) - (_thumbgroup.width/2);
+        _thumbgroup.x = 0;
         _thumbgroup.y = (stage.stageHeight - 140);
     }
 
