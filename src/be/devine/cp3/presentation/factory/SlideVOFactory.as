@@ -22,7 +22,6 @@ public class SlideVOFactory {
 
         }
 
-
         return slidevo;
     }
 }
