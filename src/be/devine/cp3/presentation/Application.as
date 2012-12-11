@@ -98,14 +98,12 @@ public class Application extends starling.display.Sprite
         {
             var tween:Tween = new Tween(_thumbgroup,.5, Transitions.EASE_IN_OUT);
             tween.animate("y", stage.stageHeight - 140);
-            tween.onComplete = slideChangeTransition1Complete;
             Starling.juggler.add(tween);
         }
         else
         {
             var tween:Tween = new Tween(_thumbgroup,.5, Transitions.EASE_IN_OUT);
             tween.animate("y", stage.stageHeight);
-            tween.onComplete = slideChangeTransition1Complete;
             Starling.juggler.add(tween);
         }
     }

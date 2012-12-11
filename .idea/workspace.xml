@@ -4,7 +4,6 @@
     <list default="true" id="2fd77afb-97d0-4059-9724-48bf12670eae" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/model/AppModel.as" />
     </list>
     <ignored path="2DEV1_buysseWarre_CP3_EINDOPDRACHT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,7 +91,7 @@
       <file leaf-file-name="Application.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="0" selection-start="2399" selection-end="2399" vertical-scroll-proportion="0.5303327">
+            <state line="105" column="50" selection-start="3077" selection-end="3077" vertical-scroll-proportion="0.6183953">
               <folding>
                 <element signature="e#189#247#0" expanded="true" />
               </folding>
@@ -683,7 +682,11 @@
       <created>1354627883623</created>
       <updated>1354627883623</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="- alle keydowns gedaan">
+      <created>1355243424909</created>
+      <updated>1355243424909</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -772,7 +775,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Textcontainer zo goed als af" />
+    <option name="LAST_COMMIT_MESSAGE" value="- alle keydowns gedaan" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -797,6 +800,7 @@
     <MESSAGE value="- Starling added&#10;- Slideshow zelf moet ng ge starlingd worden&#10;- Fullscreen klik event werkt niet meer door starling, moet ook ng gefixed worden" />
     <MESSAGE value="- factory added" />
     <MESSAGE value="- Textcontainer zo goed als af" />
+    <MESSAGE value="- alle keydowns gedaan" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -933,7 +937,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="2399" selection-end="2399" vertical-scroll-proportion="0.5303327">
+        <state line="105" column="50" selection-start="3077" selection-end="3077" vertical-scroll-proportion="0.6183953">
           <folding>
             <element signature="e#189#247#0" expanded="true" />
           </folding>
