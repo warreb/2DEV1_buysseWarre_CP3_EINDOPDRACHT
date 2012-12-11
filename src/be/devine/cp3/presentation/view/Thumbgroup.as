@@ -42,6 +42,7 @@ public class Thumbgroup extends Sprite
 
         this.addEventListener(starling.events.Event.ADDED_TO_STAGE,addedToStageHandler);
         _appmodel.addEventListener(AppModel.SELECTED_SLIDE_CHANGED,slideChangedHandler);
+        _appmodel.addEventListener(AppModel.STAGESIZE_CHANGED,slideChangedHandler);
 
 
 

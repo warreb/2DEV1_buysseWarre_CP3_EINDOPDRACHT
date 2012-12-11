@@ -27,6 +27,7 @@ import flash.display.Loader;
 import flash.display.MovieClip;
 
 import flash.display.Sprite;
+import flash.display.Stage;
 import flash.display.StageDisplayState;
 import flash.display3D.textures.Texture;
 import flash.events.Event;
@@ -80,16 +81,14 @@ public class Application extends starling.display.Sprite
         _appModel.addEventListener(AppModel.SLIDES_CHANGED,slideChangedHandler);
         _appModel.addEventListener(AppModel.SELECTED_SLIDE_CHANGED,currentSlideChangedHandler);
         _appModel.addEventListener(AppModel.THUMB_POSITION_CHANGED, thumbPositionChangedHandler);
+        _appModel.addEventListener(AppModel.STAGESIZE_CHANGED, stageSizeChangedHandler);
 
 
     }
 
-    private function currentSlideChangedHandler(event:flash.events.Event):void {
-
-        var tween:Tween = new Tween(_slideshow,.5);
-        tween.animate("alpha",0);
-        tween.onComplete = slideChangeTransition1Complete;
-        Starling.juggler.add(tween);
+    private function stageSizeChangedHandler(event:flash.events.Event):void
+    {
+        rearrange(null);
     }
 
     private function thumbPositionChangedHandler(event:flash.events.Event):void
@@ -106,6 +105,48 @@ public class Application extends starling.display.Sprite
             tween.animate("y", stage.stageHeight);
             Starling.juggler.add(tween);
         }
+    }
+
+    private function currentSlideChangedHandler(event:flash.events.Event):void {
+
+
+
+      /*  var tween:Tween = new Tween(_slideshow,.5,Transitions.EASE_OUT);
+        tween.animate("x",stage.stageWidth);
+        tween.onComplete = slideChangeTransition2Complete;
+        Starling.juggler.add(tween);
+*/
+
+       /* var tween:Tween = new Tween(_slideshow,.5);
+        tween.animate("x",-_slideshow.width-10);
+        tween.onComplete = slideChangeTransition2Complete;
+        Starling.juggler.add(tween);*/
+
+
+        /*var tween:Tween = new Tween(_slideshow,.5);
+        tween.animate("alpha",0);
+        tween.onComplete = slideChangeTransition1Complete;
+        Starling.juggler.add(tween);*/
+    }
+
+    private function slideChangeTransition2Complete():void
+    {
+
+        trace("ik kom erin");
+
+        removeChild(_slideshow);
+
+        _slideshow = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
+        addChild(_slideshow);
+        _slideshow.alpha = 0;
+
+        var tween:Tween = new Tween(_slideshow,.5);
+        tween.animate("alpha",1);
+        Starling.juggler.add(tween);
+
+        _slideshow.x = (stage.stageWidth/2) - (587/2);
+        _slideshow.y = (stage.stageHeight/5);
+        setChildIndex(_slideshow,1);
     }
 
     private function slideChangeTransition1Complete():void{
@@ -206,16 +247,44 @@ public class Application extends starling.display.Sprite
 
     private function rearrange(e:starling.events.Event):void
     {
+        if(_appModel.isFullscreen)
+        {
+            slideChangeTransition1Complete();
+            var tween:Tween = new Tween(_logo,1, Transitions.EASE_IN_OUT);
+            tween.animate("y", -100);
+            Starling.juggler.add(tween);
+
+            if(_background != null)
+            {
+                _background.alpha = 0;
+            }
+        }
+        else
+        {
+            _background.alpha = 1;
+
+            var tween:Tween = new Tween(_logo,1
+                    , Transitions.EASE_IN_OUT);
+            tween.animate("y", 25);
+            Starling.juggler.add(tween);
+        }
 
         _logo.x = (stage.stageWidth/2) - (_logo.width/2);
-        _logo.y = 25;
 
 
-        _slideshow.x = (stage.stageWidth/2) - (587/2);
+        _slideshow.x = (stage.stageWidth/2) - (_slideshow.width/2);
         _slideshow.y = (stage.stageHeight/6);
 
         _thumbgroup.x = 0;
         _thumbgroup.y = (stage.stageHeight - 140);
+
+        if(Starling.current.nativeStage.displayState == StageDisplayState.FULL_SCREEN_INTERACTIVE )
+        {
+            slideChangeTransition1Complete();
+        }else if(Starling.current.nativeStage.displayState == StageDisplayState.NORMAL)
+        {
+            slideChangeTransition1Complete();
+        }
     }
 
 }
