@@ -45,4 +45,28 @@
         </slideElements>
     </slide>
 
+    <slide id="4">
+        <slideElements>
+        <element type="titel">slidje make</element>
+        </slideElements>
+    </slide>
+
+    <slide id="5">
+        <slideElements>
+            <element type="titel">slidje make</element>
+        </slideElements>
+    </slide>
+
+    <slide id="6">
+        <slideElements>
+            <element type="titel">slidje make</element>
+        </slideElements>
+    </slide>
+
+    <slide id="7">
+        <slideElements>
+            <element type="titel">slidje make</element>
+        </slideElements>
+    </slide>
+
 </slides>

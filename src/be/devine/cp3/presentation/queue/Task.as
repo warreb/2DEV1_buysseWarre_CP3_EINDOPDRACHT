@@ -30,7 +30,6 @@ public class Task extends Sprite
 
     public function execute():void
     {
-        trace("[Task]["+ _naam +"] Executing");
         loadImage();
     }
 

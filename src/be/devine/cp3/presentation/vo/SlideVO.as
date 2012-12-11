@@ -10,6 +10,7 @@ public class SlideVO
 {
 
     public var list:Vector.<ElementVO>;
+    public var slideNr:uint;
 
     public function SlideVO( )
     {

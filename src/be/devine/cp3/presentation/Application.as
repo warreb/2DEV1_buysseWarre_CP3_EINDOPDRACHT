@@ -34,6 +34,8 @@ import flash.net.URLRequest;
 
 import org.osmf.logging.Log;
 
+import starling.animation.Tween;
+
 import starling.core.Starling;
 import starling.display.Image;
 import starling.display.Sprite;
@@ -62,6 +64,7 @@ public class Application extends starling.display.Sprite
     public function Application()
     {
 
+        trace("test");
 
         this.addEventListener(starling.events.Event.ADDED_TO_STAGE, addedToStageHandler);
 
@@ -72,12 +75,42 @@ public class Application extends starling.display.Sprite
         slideservice.load();
 
         _appModel.addEventListener(AppModel.SLIDES_CHANGED,slideChangedHandler);
+        _appModel.addEventListener(AppModel.SELECTED_SLIDE_CHANGED,currentSlideChangedHandler);
 
 
     }
 
+    private function currentSlideChangedHandler(event:flash.events.Event):void {
+
+        var tween:Tween = new Tween(_slideshow,.5);
+        tween.animate("alpha",0);
+        tween.onComplete = slideChangeTransition1Complete;
+        Starling.juggler.add(tween);
+
+
+
+    }
+
+    private function slideChangeTransition1Complete():void{
+
+        removeChild(_slideshow);
+
+         _slideshow = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
+         addChild(_slideshow);
+         _slideshow.alpha = 0;
+
+        var tween:Tween = new Tween(_slideshow,.5);
+        tween.animate("alpha",1);
+        Starling.juggler.add(tween);
+
+         _slideshow.x = (stage.stageWidth/2) - (587/2);
+         _slideshow.y = (stage.stageHeight/5);
+         setChildIndex(_slideshow,1);
+    }
+
     private function slideChangedHandler(e:flash.events.Event):void
     {
+
 
         //Slideshow aanmaken
         _slideshow = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
@@ -87,8 +120,9 @@ public class Application extends starling.display.Sprite
 
 
         //Slidethumbs aanmaken
-        _thumbgroup = new Thumbgroup(_appModel.arraySlides[_appModel.activeSlide]);
+        _thumbgroup = new Thumbgroup();
         addChild(_thumbgroup);
+        setChildIndex(_thumbgroup,numChildren -1);
 
         _thumbgroup.x = (stage.stageWidth/2) - (_thumbgroup.width/2);
         _thumbgroup.y = stage.stageHeight - 140;

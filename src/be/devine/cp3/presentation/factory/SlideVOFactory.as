@@ -10,12 +10,14 @@ import be.devine.cp3.presentation.vo.SlideVO;
 
 public class SlideVOFactory {
 
-    public static function CreateFromXML(SlideXML:XML){
+    public static function CreateFromXML(SlideXML:XML,slidenr:uint){
 
         var slidevo:SlideVO = new SlideVO();
 
         for each (var xmlElement:XML in SlideXML.slideElements.element){
             slidevo.list.push(ElementVOFactory.createFromXML(xmlElement));
+            slidevo.slideNr = slidenr;
+
 
 
         }
