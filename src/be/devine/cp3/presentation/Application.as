@@ -10,9 +10,11 @@ package be.devine.cp3.presentation
 import be.devine.cp3.presentation.service.StarlingService;
 import be.devine.cp3.presentation.view.Background;
 import be.devine.cp3.presentation.view.FullscreenButton;
+import be.devine.cp3.presentation.view.Thumb;
 import be.devine.cp3.presentation.view.Slideshow;
 import be.devine.cp3.presentation.model.AppModel;
 import be.devine.cp3.presentation.service.SlideService;
+import be.devine.cp3.presentation.view.Thumbgroup;
 import be.devine.cp3.presentation.vo.SlideVO;
 import be.devine.cp3.presentation.xml.XMLParser;
 
@@ -41,9 +43,6 @@ import starling.textures.Texture;
 
 public class Application extends starling.display.Sprite
 {
-    private var _loader:Loader;
-    private var _bitmapData:BitmapData;
-    private var _pattern:Sprite;
 
     private var _appModel:AppModel;
 
@@ -51,12 +50,9 @@ public class Application extends starling.display.Sprite
     private var _fullscreenbutton;
 
     private var _slideshow:Slideshow;
+    private var _thumbgroup:Thumbgroup;
 
     private var _logo:Image;
-    private var _xmlparser:XMLParser;
-    private var _slideVO:SlideVO;
-
-    private var _slideshowcontainer: starling.display.Sprite;
 
     private var slideservice:SlideService;
 
@@ -78,15 +74,24 @@ public class Application extends starling.display.Sprite
         _appModel.addEventListener(AppModel.SLIDES_CHANGED,slideChangedHandler);
 
 
-
-
-
     }
 
-    private function slideChangedHandler(e:flash.events.Event):void {
+    private function slideChangedHandler(e:flash.events.Event):void
+    {
 
-        _slideshow  = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
-        _slideshowcontainer.addChild(_slideshow);
+        //Slideshow aanmaken
+        _slideshow = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
+        addChild(_slideshow);
+
+
+
+
+        //Slidethumbs aanmaken
+        _thumbgroup = new Thumbgroup(_appModel.arraySlides[_appModel.activeSlide]);
+        addChild(_thumbgroup);
+
+        _thumbgroup.x = (stage.stageWidth/2) - (_thumbgroup.width/2);
+        _thumbgroup.y = stage.stageHeight - 140;
 
         _slideshow.x = (stage.stageWidth/2) - (587/2);
         _slideshow.y = (stage.stageHeight/5);
@@ -112,15 +117,11 @@ public class Application extends starling.display.Sprite
         _background = new Background();
          addChild(_background);
 
+
+
         var bfsLogo:Logo = new Logo();
         _logo = StarlingService.MakeStarlingImg(bfsLogo);
         addChild(_logo);
-
-        _slideshowcontainer = new Sprite();
-        addChild(_slideshowcontainer);
-
-
-
 
          _fullscreenbutton = new FullscreenButton();
          addChild(_fullscreenbutton);
@@ -143,6 +144,9 @@ public class Application extends starling.display.Sprite
 
         _slideshow.x = (stage.stageWidth/2) - (587/2);
         _slideshow.y = (stage.stageHeight/6);
+
+        _thumbgroup.x = (stage.stageWidth/2) - (_thumbgroup.width/2);
+        _thumbgroup.y = (stage.stageHeight - 140);
     }
 
 }

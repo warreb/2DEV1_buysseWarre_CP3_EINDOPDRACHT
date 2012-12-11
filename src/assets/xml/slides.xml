@@ -22,10 +22,10 @@
             <element type="image">2.jpg</element>
             <element type="bullet">
                 <bullets>
-                    <bullet>bulletpoint1</bullet>
-                    <bullet>bulletpoint1</bullet>
-                    <bullet>bulletpoint1</bullet>
-                    <bullet>bulletpoint1</bullet>
+                    <bullet>bulletpoint2</bullet>
+                    <bullet>bulletpoint2</bullet>
+                    <bullet>bulletpoint2</bullet>
+                    <bullet>bulletpoint2</bullet>
                 </bullets>
             </element>
         </slideElements>
@@ -36,10 +36,10 @@
             <element type="image">3.jpg</element>
             <element type="bullet">
                 <bullets>
-                    <bullet>bulletpoint1</bullet>
-                    <bullet>bulletpoint1</bullet>
-                    <bullet>bulletpoint1</bullet>
-                    <bullet>bulletpoint1</bullet>
+                    <bullet>bulletpoint3</bullet>
+                    <bullet>bulletpoint3</bullet>
+                    <bullet>bulletpoint3</bullet>
+                    <bullet>bulletpoint3</bullet>
                 </bullets>
             </element>
         </slideElements>

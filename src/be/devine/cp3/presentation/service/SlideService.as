@@ -18,8 +18,7 @@ public class SlideService extends EventDispatcher{
 
     public var slides:Array;
 
-    public function SlideService(){
-    }
+    public function SlideService(){}
 
     public  function load(){
         var slideLoader:URLLoader = new URLLoader();
