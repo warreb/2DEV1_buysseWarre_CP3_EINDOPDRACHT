@@ -15,7 +15,7 @@ public class StarlingService {
 
     public  static function MakeStarlingImg(object:DisplayObject):Image{
 
-        var bitmapdata = new BitmapData(object.width, object.height,true,0x000000);
+        var bitmapdata:BitmapData = new BitmapData(object.width, object.height,true,0x000000);
 
         bitmapdata.draw(object);
 

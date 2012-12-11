@@ -10,6 +10,7 @@ import flash.display.Loader;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.net.URLRequest;
+import flash.net.URLRequest;
 
 public class Task extends Sprite
 {
@@ -35,7 +36,7 @@ public class Task extends Sprite
 
     private function loadImage():void
     {
-        var request = new URLRequest(_url);
+        var request:URLRequest = new URLRequest(_url);
        _image.load(request);
     }
 

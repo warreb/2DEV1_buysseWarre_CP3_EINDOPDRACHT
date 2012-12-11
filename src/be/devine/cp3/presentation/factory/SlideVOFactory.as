@@ -10,7 +10,7 @@ import be.devine.cp3.presentation.vo.SlideVO;
 
 public class SlideVOFactory {
 
-    public static function CreateFromXML(SlideXML:XML,slidenr:uint){
+    public static function CreateFromXML(SlideXML:XML,slidenr:uint):SlideVO{
 
         var slidevo:SlideVO = new SlideVO();
 

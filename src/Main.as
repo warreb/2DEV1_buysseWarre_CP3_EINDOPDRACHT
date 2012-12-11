@@ -39,6 +39,8 @@ public class Main extends MovieClip
 
 
 
+
+
         stage.nativeWindow.visible = true;
         stage.nativeWindow.width = 1024;
         stage.nativeWindow.height = 786;

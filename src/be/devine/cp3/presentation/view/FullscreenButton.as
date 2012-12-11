@@ -31,7 +31,7 @@ public class FullscreenButton extends starling.display.Sprite
     {
 
         var bfsbtn:BasisFullscreenButton = new BasisFullscreenButton();
-        var bitmapdata = new BitmapData(bfsbtn.width, bfsbtn.height,true,0x000000);
+        var bitmapdata:BitmapData = new BitmapData(bfsbtn.width, bfsbtn.height,true,0x000000);
 
         bitmapdata.draw(bfsbtn);
 

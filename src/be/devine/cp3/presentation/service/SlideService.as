@@ -20,7 +20,7 @@ public class SlideService extends EventDispatcher{
 
     public function SlideService(){}
 
-    public  function load(){
+    public  function load():void{
         var slideLoader:URLLoader = new URLLoader();
         slideLoader.addEventListener(Event.COMPLETE,SlideXMLLoadedHandler);
         slideLoader.load(new URLRequest('assets/xml/slides.xml'));

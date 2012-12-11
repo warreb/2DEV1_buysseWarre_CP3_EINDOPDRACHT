@@ -7,12 +7,13 @@
  */
 package be.devine.cp3.presentation.factory {
 import be.devine.cp3.presentation.vo.BulletElementVO;
+import be.devine.cp3.presentation.vo.ElementVO;
 import be.devine.cp3.presentation.vo.ImageElementVO;
 import be.devine.cp3.presentation.vo.TextElementVO;
 
 public class ElementVOFactory {
 
-    public static function createFromXML(elementXML:XML){
+    public static function createFromXML(elementXML:XML): ElementVO{
 
         switch("" + elementXML.@type)
         {
@@ -24,7 +25,7 @@ public class ElementVOFactory {
         return null;
     }
 
-    private static function createSubtitelElementVo(info:XML){
+    private static function createSubtitelElementVo(info:XML):TextElementVO{
         var elementvo:TextElementVO = new TextElementVO();
         elementvo.text = info;
         elementvo.size = 20;
@@ -32,7 +33,7 @@ public class ElementVOFactory {
         return elementvo;
     }
 
-    public static function createTitelElementVO(info:XML){
+    public static function createTitelElementVO(info:XML):TextElementVO{
         var elementvo:TextElementVO = new TextElementVO();
         elementvo.text = info;
         elementvo.size = 40;
@@ -40,13 +41,13 @@ public class ElementVOFactory {
         return elementvo;
     }
 
-    public static function createImageElementVO(info:XML){
+    public static function createImageElementVO(info:XML):ImageElementVO{
         var elementvo:ImageElementVO = new ImageElementVO();
         elementvo.url = info;
         return elementvo;
     }
 
-    public static function createBulletElementVO(info:XML){
+    public static function createBulletElementVO(info:XML):BulletElementVO{
 
         var elementvo: BulletElementVO = new BulletElementVO();
 

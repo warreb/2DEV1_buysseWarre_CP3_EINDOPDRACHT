@@ -38,15 +38,15 @@ public class Thumbgroup extends Sprite
     {
         if(this.y == stage.stageHeight)
         {
-            var tween:Tween = new Tween(this,.5, Transitions.EASE_IN_OUT);
-            tween.animate("y", stage.stageHeight - 140);
-            Starling.juggler.add(tween);
+            var twn:Tween = new Tween(this,.5, Transitions.EASE_IN_OUT);
+            twn.animate("y", stage.stageHeight - 140);
+            Starling.juggler.add(twn);
         }
         else
         {
-            var tween:Tween = new Tween(this,.5, Transitions.EASE_IN_OUT);
-            tween.animate("y", stage.stageHeight);
-            Starling.juggler.add(tween);
+            var t:Tween = new Tween(this,.5, Transitions.EASE_IN_OUT);
+            t.animate("y", stage.stageHeight);
+            Starling.juggler.add(t);
         }
     }
 
@@ -55,34 +55,34 @@ public class Thumbgroup extends Sprite
         var xPos:Number = stage.stageWidth/2 ;
         var xPosTotalKleiner: Number =  0;
 
-        for each(var _thumb in _thumbArr){
+        for each(var _thumb:Thumb in _thumbArr){
             if(_thumb.slideVO.slideNr < _appmodel.activeSlide){
                 xPosTotalKleiner += (_thumb.width + 6 );
             }
         }
 
 
-        for each(var _thumb in _thumbArr){
+        for each(var _thumb:Thumb in _thumbArr){
 
             if(_thumb.slideVO.slideNr == _appmodel.activeSlide ){
-                var tween:Tween = new Tween(_thumb,.5,Transitions.EASE_OUT);
-                tween.moveTo(xPos -  _thumb.width/2,0)
-                Starling.juggler.add(tween);
+                var twn:Tween = new Tween(_thumb,.5,Transitions.EASE_OUT);
+                twn.moveTo(xPos -  _thumb.width/2,0)
+                Starling.juggler.add(twn);
 
             }
 
             if(_thumb.slideVO.slideNr > _appmodel.activeSlide ){
-                var tween:Tween = new Tween(_thumb,.5,Transitions.EASE_OUT);
-                tween.moveTo((xPos - _thumb.width/2) + (( _thumb.slideVO.slideNr - _appmodel.activeSlide ) * (_thumb.width + 6) ),0)
+                var an:Tween = new Tween(_thumb,.5,Transitions.EASE_OUT);
+                an.moveTo((xPos - _thumb.width/2) + (( _thumb.slideVO.slideNr - _appmodel.activeSlide ) * (_thumb.width + 6) ),0)
 
-                Starling.juggler.add(tween);
+                Starling.juggler.add(an);
             }
 
             if(_thumb.slideVO.slideNr < _appmodel.activeSlide){
-                var tween:Tween = new Tween(_thumb,.5,Transitions.EASE_OUT);
-                tween.moveTo((xPos - _thumb.width/2) - xPosTotalKleiner,0)
+                var t:Tween = new Tween(_thumb,.5,Transitions.EASE_OUT);
+                t.moveTo((xPos - _thumb.width/2) - xPosTotalKleiner,0)
 
-                Starling.juggler.add(tween);
+                Starling.juggler.add(t);
                 xPosTotalKleiner -= (_thumb.width + 6 );
             }
 

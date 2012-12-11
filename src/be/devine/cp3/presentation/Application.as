@@ -37,7 +37,7 @@ public class Application extends starling.display.Sprite
     private var _appModel:AppModel;
 
     private var _background:Background;
-    private var _fullscreenbutton;
+    private var _fullscreenbutton:FullscreenButton;
 
     private var _slideshow:Slideshow;
     private var _thumbgroup:Thumbgroup;
@@ -78,23 +78,23 @@ public class Application extends starling.display.Sprite
 
         switch(_appModel.slideTween){
             case 'left':
-                var tween:Tween = new Tween(_slideshow,.5,Transitions.EASE_IN_OUT);
-                tween.animate("x",stage.stageWidth);
-                tween.onComplete = slideChangeTransition1Complete;
-                Starling.juggler.add(tween);
+                var twn:Tween = new Tween(_slideshow,.5,Transitions.EASE_IN_OUT);
+                twn.animate("x",stage.stageWidth);
+                twn.onComplete = slideChangeTransition1Complete;
+                Starling.juggler.add(twn);
                 break;
             case 'right':
-                var tween:Tween = new Tween(_slideshow,.5, Transitions.EASE_IN_OUT);
-                tween.animate("x",-_slideshow.width-10);
-                tween.onComplete = slideChangeTransition1Complete;
-                Starling.juggler.add(tween);
+                var t:Tween = new Tween(_slideshow,.5, Transitions.EASE_IN_OUT);
+                t.animate("x",-_slideshow.width-10);
+                t.onComplete = slideChangeTransition1Complete;
+                Starling.juggler.add(t);
                 break;
             case 'click':
             default :
-                var tween:Tween = new Tween(_slideshow,.5, Transitions.EASE_IN_OUT);
-                tween.animate("alpha",0);
-                tween.onComplete = slideChangeTransition1Complete;
-                Starling.juggler.add(tween);
+                var an:Tween = new Tween(_slideshow,.5, Transitions.EASE_IN_OUT);
+                an.animate("alpha",0);
+                an.onComplete = slideChangeTransition1Complete;
+                Starling.juggler.add(an);
                 break;
         }
     }
@@ -143,7 +143,7 @@ public class Application extends starling.display.Sprite
 
     private function keydownhandler(event:KeyboardEvent):void
     {
-         var keycode = event.keyCode;
+         var keycode:Number = event.keyCode;
 
         switch(keycode)
         {
@@ -203,10 +203,10 @@ public class Application extends starling.display.Sprite
         {
             _background.alpha = 1;
 
-            var tween:Tween = new Tween(_logo,1
+            var t:Tween = new Tween(_logo,1
                     , Transitions.EASE_IN_OUT);
-            tween.animate("y", 25);
-            Starling.juggler.add(tween);
+            t.animate("y", 25);
+            Starling.juggler.add(t);
         }
 
         _logo.x = (stage.stageWidth/2) - (_logo.width/2);
