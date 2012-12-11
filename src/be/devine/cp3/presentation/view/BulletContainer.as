@@ -39,7 +39,7 @@ public class BulletContainer extends Container {
 
             if(nrOfBullets % 4 == 0){
                 yPos = 0;
-                xPos +=100;
+                xPos +=200;
             }
             nrOfBullets +=1;
         }

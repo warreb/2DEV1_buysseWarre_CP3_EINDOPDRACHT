@@ -1,15 +1,15 @@
 <slides>
     <slide id="1">
         <slideElements>
-            <element type="titel">Titel</element>
-            <element type="subtitel">Subtitel</element>
+            <element type="titel">The Hobbit: An unexpected Journey</element>
+            <element type="subtitel">A tale by Bilbo Baggins</element>
             <element type="image">1.jpg</element>
             <element type="bullet">
                 <bullets>
-                    <bullet>bulletpoint1</bullet>
-                    <bullet>bulletpoint1</bullet>
-                    <bullet>bulletpoint1</bullet>
-                    <bullet>bulletpoint1</bullet>
+                    <bullet>Bilbo Baggins</bullet>
+                    <bullet>Gandalf The Grey</bullet>
+                    <bullet>Little Frodo Baggins</bullet>
+                    <bullet>The dwarflords</bullet>
                 </bullets>
             </element>
 
@@ -18,43 +18,29 @@
     </slide>
     <slide id="2">
         <slideElements>
-            <element type="titel">Titel2</element>
+            <element type="titel">The dark knight Rises</element>
             <element type="image">2.jpg</element>
             <element type="bullet">
                 <bullets>
-                    <bullet>bulletpoint2</bullet>
-                    <bullet>bulletpoint2</bullet>
-                    <bullet>bulletpoint2</bullet>
-                    <bullet>bulletpoint2</bullet>
+                    <bullet>The Dark Knight</bullet>
+                    <bullet>Bane</bullet>
+                    <bullet>Doctor X</bullet>
+                    <bullet>Humpty Dumpty</bullet>
                 </bullets>
             </element>
         </slideElements>
     </slide>
     <slide id="3">
         <slideElements>
-            <element type="titel">Titel 3</element>
+            <element type="titel">Sherlock Holmes</element>
+            <element type="subtitel">A Game Of Shadows</element>
             <element type="image">3.jpg</element>
             <element type="bullet">
                 <bullets>
-                    <bullet>bulletpoint3</bullet>
-                    <bullet>bulletpoint3</bullet>
-                    <bullet>bulletpoint3</bullet>
-                    <bullet>bulletpoint3</bullet>
-                </bullets>
-            </element>
-        </slideElements>
-    </slide>
-
-    <slide id="3">
-        <slideElements>
-            <element type="titel">Titel 3</element>
-            <element type="image">3.jpg</element>
-            <element type="bullet">
-                <bullets>
-                    <bullet>bulletpoint3</bullet>
-                    <bullet>bulletpoint3</bullet>
-                    <bullet>bulletpoint3</bullet>
-                    <bullet>bulletpoint3</bullet>
+                    <bullet>Sherlock Holmes</bullet>
+                    <bullet>Dr. Watson</bullet>
+                    <bullet>Guy Ritchie</bullet>
+                    <bullet>Robert Downey Jr.</bullet>
                 </bullets>
             </element>
         </slideElements>
@@ -62,14 +48,42 @@
 
     <slide id="3">
         <slideElements>
-            <element type="titel">Titel 3</element>
-            <element type="image">3.jpg</element>
+            <element type="titel">Up</element>
+            <element type="image">7.jpg</element>
             <element type="bullet">
                 <bullets>
-                    <bullet>bulletpoint3</bullet>
-                    <bullet>bulletpoint3</bullet>
-                    <bullet>bulletpoint3</bullet>
-                    <bullet>bulletpoint3</bullet>
+                    <bullet>Young boy</bullet>
+                    <bullet>Old scrat</bullet>
+                    <bullet>Jibber</bullet>
+                    <bullet>Jabber</bullet>
+                    <bullet>humpty</bullet>
+                    <bullet>dumpty</bullet>
+                    <bullet>balloons</bullet>
+                    <bullet>fat boy</bullet>
+                    <bullet>gall</bullet>
+                    <bullet>house</bullet>
+                    <bullet>hupla</bullet>
+                    <bullet>drie</bullet>
+                </bullets>
+            </element>
+        </slideElements>
+    </slide>
+
+    <slide id="3">
+        <slideElements>
+            <element type="titel">A Lot Of BulletPoints</element>
+            <element type="bullet">
+                <bullets>
+                    <bullet>Humpty Dumpty</bullet>
+                    <bullet>Doctor X</bullet>
+                    <bullet>Mutant Ninja Turtles</bullet>
+                    <bullet>Quick en Flupke</bullet>
+                    <bullet>Dikn en Dunn</bullet>
+                    <bullet>Tjif en Tjaf</bullet>
+                    <bullet>Beavis</bullet>
+                    <bullet>Butthead</bullet>
+                    <bullet>toarte</bullet>
+                    <bullet>kloaj</bullet>
                 </bullets>
             </element>
         </slideElements>
@@ -77,13 +91,16 @@
 
     <slide id="4">
         <slideElements>
-        <element type="titel">slidje 4 make</element>
+        <element type="titel">Despicable Me</element>
+            <element type="image">4.jpg</element>
         </slideElements>
     </slide>
 
     <slide id="5">
         <slideElements>
-            <element type="titel">slidje 5 make</element>
+            <element type="titel">Despicable Me - Multiple images</element>
+            <element type="image">5.jpg</element>
+            <element type="image">6.jpg</element>
         </slideElements>
     </slide>
 
