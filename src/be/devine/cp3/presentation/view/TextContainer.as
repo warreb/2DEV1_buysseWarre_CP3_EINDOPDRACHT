@@ -33,8 +33,6 @@ public class TextContainer extends Container
     {
             super(txtelement)
 
-        trace("in de textcontainer");
-
         var starlingtext: starling.text.TextField = new starling.text.TextField(587,50,txtelement.text,"Agency",txtelement.size,0X000000);
 
         starlingtext.hAlign = HAlign.CENTER;

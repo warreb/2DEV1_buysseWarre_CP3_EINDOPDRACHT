@@ -34,16 +34,12 @@ import flash.net.URLRequest;
 
 import org.osmf.logging.Log;
 
-import starling.animation.Transitions;
-
 import starling.animation.Tween;
 
 import starling.core.Starling;
 import starling.display.Image;
 import starling.display.Sprite;
 import starling.events.Event;
-import starling.events.KeyboardEvent;
-import starling.events.KeyboardEvent;
 import starling.textures.Texture;
 
 
@@ -68,6 +64,8 @@ public class Application extends starling.display.Sprite
     public function Application()
     {
 
+        trace("test");
+
         this.addEventListener(starling.events.Event.ADDED_TO_STAGE, addedToStageHandler);
 
         this._appModel = AppModel.getInstance();
@@ -78,55 +76,36 @@ public class Application extends starling.display.Sprite
 
         _appModel.addEventListener(AppModel.SLIDES_CHANGED,slideChangedHandler);
         _appModel.addEventListener(AppModel.SELECTED_SLIDE_CHANGED,currentSlideChangedHandler);
-        _appModel.addEventListener(AppModel.STAGESIZE_CHANGED,stageSizeChangedHandler);
-        _appModel.addEventListener(AppModel.THUMB_POSITION_CHANGED,thumbPositionChangedHandler);
 
 
     }
 
-    private function thumbPositionChangedHandler(event:flash.events.Event):void
-    {
-        if(_thumbgroup.y == stage.stageHeight)
-        {
-            var tween:Tween = new Tween(_thumbgroup,.5, Transitions.EASE_IN_OUT);
-            tween.animate("y", stage.stageHeight - 140);
-            Starling.juggler.add(tween);
-        }else
-        {
-            var tween:Tween = new Tween(_thumbgroup,.5, Transitions.EASE_IN_OUT);
-            tween.animate("y", stage.stageHeight);
-            Starling.juggler.add(tween);
-        }
-    }
+    private function currentSlideChangedHandler(event:flash.events.Event):void {
 
-    private function stageSizeChangedHandler(event:flash.events.Event):void
-    {
-        rearrange(null);
-    }
-
-    private function currentSlideChangedHandler(event:flash.events.Event):void
-    {
         var tween:Tween = new Tween(_slideshow,.5);
         tween.animate("alpha",0);
         tween.onComplete = slideChangeTransition1Complete;
         Starling.juggler.add(tween);
+
+
+
     }
 
-    private function slideChangeTransition1Complete():void
-    {
+    private function slideChangeTransition1Complete():void{
+
         removeChild(_slideshow);
 
-        _slideshow = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
-        addChild(_slideshow);
-        _slideshow.alpha = 0;
+         _slideshow = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
+         addChild(_slideshow);
+         _slideshow.alpha = 0;
 
         var tween:Tween = new Tween(_slideshow,.5);
         tween.animate("alpha",1);
         Starling.juggler.add(tween);
 
-        _slideshow.x = (stage.stageWidth/2) - (587/2);
-        _slideshow.y = (stage.stageHeight/5);
-        setChildIndex(_slideshow,1);
+         _slideshow.x = (stage.stageWidth/2) - (587/2);
+         _slideshow.y = (stage.stageHeight/5);
+         setChildIndex(_slideshow,1);
     }
 
     private function slideChangedHandler(e:flash.events.Event):void
@@ -135,25 +114,26 @@ public class Application extends starling.display.Sprite
 
         //Slideshow aanmaken
         _slideshow = new Slideshow(_appModel.arraySlides[_appModel.activeSlide]);
-        addChildAt(_slideshow, 1);
+        addChild(_slideshow);
+
+
+
 
         //Slidethumbs aanmaken
         _thumbgroup = new Thumbgroup();
         addChild(_thumbgroup);
         setChildIndex(_thumbgroup,numChildren -1);
 
-        _thumbgroup.x = stage.stageWidth/2 - _thumbgroup.width/2;
-        _thumbgroup.y = stage.stageHeight;
+        _thumbgroup.x = (stage.stageWidth/2) - (_thumbgroup.width/2);
+        _thumbgroup.y = stage.stageHeight - 140;
 
         _slideshow.x = (stage.stageWidth/2) - (587/2);
         _slideshow.y = (stage.stageHeight/5);
 
     }
 
-
-    private function slidesCompleteHandler(e:flash.events.Event):void
-    {
-        _appModel.arraySlides = slideservice.slides;
+    private function slidesCompleteHandler(e:flash.events.Event):void {
+       _appModel.arraySlides = slideservice.slides;
         _appModel.activeSlide = _appModel.arraySlides[0];
     }
 
@@ -162,66 +142,45 @@ public class Application extends starling.display.Sprite
     private function addedToStageHandler(e:starling.events.Event):void
     {
         stage.addEventListener(starling.events.Event.RESIZE, rearrange);
-        stage.addEventListener(starling.events.KeyboardEvent.KEY_DOWN, keydownhandler);
         layout();
 
-    }
-
-    private function keydownhandler(event:KeyboardEvent):void
-    {
-        var keycode:Number = event.keyCode;
-
-        switch(keycode)
-        {
-            case 32:
-                if(_appModel.isThumbActive)
-                {
-                    _appModel.isThumbActive = false;
-                }
-                    else
-                {
-                    _appModel.isThumbActive = true;
-                }
-            break;
-            case 37:
-                _appModel.goToPreviousSlide();
-            break;
-            case 39:
-                _appModel.goToNextSlide();
-            break;
-        }
     }
 
     private function layout():void
     {
         _background = new Background();
-        addChildAt(_background, 0);
+         addChild(_background);
+
+
 
         var bfsLogo:Logo = new Logo();
         _logo = StarlingService.MakeStarlingImg(bfsLogo);
         addChild(_logo);
 
-        _fullscreenbutton = new FullscreenButton();
-        addChild(_fullscreenbutton);
+         _fullscreenbutton = new FullscreenButton();
+         addChild(_fullscreenbutton);
+
 
         _logo.x = (stage.stageWidth/2) - (_logo.width/2);
         _logo.y = 25;
+
+
     }
+
 
 
     private function rearrange(e:starling.events.Event):void
     {
-        /*_background = new Background();
-        addChildAt(_background, 0);*/
 
         _logo.x = (stage.stageWidth/2) - (_logo.width/2);
         _logo.y = 25;
 
+
         _slideshow.x = (stage.stageWidth/2) - (587/2);
         _slideshow.y = (stage.stageHeight/6);
 
-        _thumbgroup.x = stage.stageWidth/2 - _thumbgroup.width/2;
-        _thumbgroup.y = stage.stageHeight;
+        _thumbgroup.x = (stage.stageWidth/2) - (_thumbgroup.width/2);
+        _thumbgroup.y = (stage.stageHeight - 140);
     }
 
 }
