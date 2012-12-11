@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fd77afb-97d0-4059-9724-48bf12670eae" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/icon_32.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2DEV1_buysseWarre_CP3_EINDOPDRACHT.iml" afterPath="$PROJECT_DIR$/2DEV1_buysseWarre_CP3_EINDOPDRACHT.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main-app.xml" afterPath="$PROJECT_DIR$/Main-app.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.as" afterPath="$PROJECT_DIR$/src/Main.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/Application.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/ElementVOFactory.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/ElementVOFactory.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/SlideVOFactory.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/factory/SlideVOFactory.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/queue/Task.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/queue/Task.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/service/SlideService.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/service/SlideService.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/service/StarlingService.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/service/StarlingService.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/FullscreenButton.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/FullscreenButton.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumbgroup.as" afterPath="$PROJECT_DIR$/src/be/devine/cp3/presentation/view/Thumbgroup.as" />
     </list>
     <ignored path="2DEV1_buysseWarre_CP3_EINDOPDRACHT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -737,7 +725,11 @@
       <created>1355246786487</created>
       <updated>1355246786487</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="- transitions in comment">
+      <created>1355257966955</created>
+      <updated>1355257966955</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
