@@ -54,7 +54,7 @@ public class Application extends starling.display.Sprite
 
     private var _logo:Image;
 
-    private var slideservice:SlideService;
+    private var _slideservice:SlideService;
 
 
 
@@ -67,9 +67,9 @@ public class Application extends starling.display.Sprite
 
         this._appModel = AppModel.getInstance();
 
-        slideservice = new SlideService();
-        slideservice.addEventListener(flash.events.Event.COMPLETE,slidesCompleteHandler);
-        slideservice.load();
+        _slideservice = new SlideService();
+        _slideservice.addEventListener(flash.events.Event.COMPLETE,slidesCompleteHandler);
+        _slideservice.load();
 
         _appModel.addEventListener(AppModel.SLIDES_CHANGED,slideChangedHandler);
 
@@ -87,7 +87,7 @@ public class Application extends starling.display.Sprite
 
 
         //Slidethumbs aanmaken
-        _thumbgroup = new Thumbgroup(_appModel.arraySlides[_appModel.activeSlide]);
+        _thumbgroup = new Thumbgroup(_appModel.arraySlides);
         addChild(_thumbgroup);
 
         _thumbgroup.x = (stage.stageWidth/2) - (_thumbgroup.width/2);
@@ -99,8 +99,11 @@ public class Application extends starling.display.Sprite
     }
 
     private function slidesCompleteHandler(e:flash.events.Event):void {
-       _appModel.arraySlides = slideservice.slides;
+
+       _appModel.arraySlides = _slideservice.slides;
         _appModel.activeSlide = _appModel.arraySlides[0];
+
+
     }
 
 

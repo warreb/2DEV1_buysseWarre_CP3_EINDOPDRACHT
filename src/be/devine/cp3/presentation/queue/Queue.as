@@ -46,7 +46,6 @@ public class Queue extends EventDispatcher
 
     private function taskDoneHandler(e:Event):void
     {
-        trace("[Queue] task completed: "+e.target);
         this.currentTask ++;
     }
 
@@ -57,18 +56,15 @@ public class Queue extends EventDispatcher
 
     public function set currentTask(value:int):void
     {
-        trace("[Queue] trying to change currenttask from" + _currentTask + ' to '+ value);
         if(_currentTask != value)
         {
             _currentTask = value;
-            trace("[Queue] CurrentTask changed to " + _currentTask, "total tasks:" + _tasks.length);
             if(currentTask < _tasks.length)
             {
                 loadNextTask();
             }
             else
             {
-                trace("[Queue] Queue COMPLETE");
                 dispatchEvent(new Event(QUEUE_COMPLETE));
             }
         }
